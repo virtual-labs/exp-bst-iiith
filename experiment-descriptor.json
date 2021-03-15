@@ -1,0 +1,258 @@
+{
+  "unit-type": "lu",
+  "label": "Binary Search Tree",
+  "basedir": ".",
+  "units": [
+    {
+      "unit-type": "aim"
+    },
+    {
+      "unit-type": "task",
+      "label": "Overview",
+      "content-type": "video",
+      "source": "overview.md",
+      "target": "overview.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz Instructions",
+      "content-type": "video",
+      "source": "pre-test.md",
+      "target": "pre-test.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz",
+      "content-type": "assesment",
+      "source": "pretest.js",
+      "target": "pretest.html"
+    },
+    {
+      "unit-type": "lu",
+      "label": "BST",
+      "basedir": "bst",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+        {
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "BST : Concept",
+          "content-type": "video",
+          "source": "bst-concept.md",
+          "target": "bst-concept.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "BST : Properties",
+          "content-type": "video",
+          "source": "bst-properties.md",
+          "target": "bst-properties.html"
+        },
+        
+	{
+         "unit-type": "task",
+         "label": "Binary Search Tree Quiz",
+         "content-type": "assesment",
+         "source": "binary-search-tree-quiz.js",
+         "target": "binary-search-tree-quiz.html"
+       }
+      
+      ]
+    },
+    {
+      "unit-type": "lu",
+      "label": "BST : Insert",
+      "basedir": "bst-insert",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "BST : Insert Algorithm",
+          "content-type": "video",
+          "source": "bst-insert-algorithm.md",
+          "target": "bst-insert-algorithm.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "BST : Insert Demo",
+          "content-type": "simulation",
+          "source": "simulation/bstInsert.html",
+          "target": "bstInsert.html"
+        },
+	
+        {
+         "unit-type": "task",
+         "label": "BST : Insert Quiz",
+         "content-type": "assesment",
+         "source": "bst-insert-quiz.js",
+         "target": "bst-insert-quiz.html"
+       }
+      ]
+    },
+
+{
+      "unit-type": "lu",
+      "label": "BST : Search",
+      "basedir": "bst-search",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "BST : Search Algorithm",
+          "content-type": "video",
+          "source": "bst-search-algorithm.md",
+          "target": "bst-search-algorithm.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "BST : Insert Demo",
+          "content-type": "simulation",
+          "source": "simulation/bstSearch.html",
+          "target": "bstSearch.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "BST : Search Practice",
+          "content-type": "simulation",
+          "source": "simulation/bstSearchPractice.html",
+          "target": "bstSearchPractice.html"
+        }
+        
+      ]
+    },
+{
+      "unit-type": "lu",
+      "label": "BST : Delete",
+      "basedir": "bst-delete",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "BST : Delete Algorithm",
+          "content-type": "video",
+          "source": "bst-delete-algorithm.md",
+          "target": "bst-delete-algorithm.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "BST : Delete Demo",
+          "content-type": "simulation",
+          "source": "simulation/bstDelete.html",
+          "target": "bstDelete.html"
+        },
+	{
+          "unit-type": "task",
+          "label": "BST : Delete Exercise",
+          "content-type": "simulation",
+          "source": "simulation/bstDeleteExercise.html",
+          "target": "bstDeleteExercise.html"
+        },
+        {
+         "unit-type": "task",
+         "label": "BST : Delete Quiz",
+         "content-type": "assesment",
+         "source": "bst-delete-quiz.js",
+         "target": "bst-delete-quiz.html"
+       }
+      ]
+    },
+
+
+        {
+      "unit-type": "lu",
+      "label": "Analysis",
+      "basedir": "analysis",
+      "units": [
+        {
+          "unit-type": "aim"
+        },
+	{
+          "unit-type": "task",
+          "label": "Overview",
+          "content-type": "video",
+          "source": "overview.md",
+          "target": "overview.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Uses",
+          "content-type": "video",
+          "source": "uses.md",
+          "target": "uses.html"
+        },
+        
+	{
+          "unit-type": "task",
+          "label": "Relationships",
+          "content-type": "video",
+          "source": "relationships.md",
+          "target": "relationships.html"
+        },
+        {
+          "unit-type": "task",
+          "label": "Analysis Quiz",
+          "content-type": "assesment",
+          "source": "analysis-quiz.js",
+          "target": "analysis-quiz.js"
+        }
+      ]
+    },
+    {
+      "unit-type": "task",
+      "label": "Post Test Quiz Instructions",
+      "content-type": "video",
+      "source": "post-test.md",
+      "target": "post-test.html"
+    },
+    {
+      "unit-type": "task",
+      "label": "Post Test Quiz",
+      "content-type": "assesment",
+      "source": "posttest.js",
+      "target": "posttest.html"
+    },
+       
+    {
+      "unit-type": "task",
+      "label": "Further Readings/References",
+      "content-type": "text",
+      "source": "further-reading-and-references.md",
+      "target": "further-reading-and-references.html"
+    }
+  ]
+}
