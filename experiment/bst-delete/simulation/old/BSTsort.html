@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <title>Binary Search Tree: Sorting</title>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+  <script src="/build/code/static/libs/d3.min.js"></script>
+</head>
+<body>
+Click on the generate graph button to get a randomly genrated BST.
+<div class="instruction">
+  <b>Instructions:</b>
+  <ol>
+  	<li>Click on the nodes of BST in ascending (sorted) order.</li>
+    <li>Click on the "Check Answer" button to check whether your answer is correct.</li>
+  </ol>
+</div>
+<button type="button" id="generate_question" onclick="initialize();">Generate a random BST</button>
+<div id="graph"></div>
+<span id="answer" style="position: absolute;top: 90%;"></span>
+<span id="msg"></span></br>
+<span id="message" style="position: absolute;top: 95%;color: red;"></span>
+<button type="button" id="checkButton" onclick="checkAns();">Check Answer</button>
+<button type="button" id="solution_button" onclick="Print(bst.inorder);">Solution</button>
+<script src="../js/BST.js" charset="utf-8"></script>
+<script src="../js/graph.js" charset="utf-8"></script>
+<script>
+	var ans = [];
+	var correct = [];
+	function checkAns(){
+		console.log(ans);
+		var n = ans.length;
+		var Ans = true;
+		var test = [];
+		trav = [];
+		for (var i=0;i<n;i+=1){
+			var id = "#node-" + ans[i];
+			d3.select(id).select("circle")
+			             .style("fill","#fff");
+		}
+		bst.inorder();
+		n = trav.length;
+		for(var i = 0;i<n;i+=1){
+			if(trav[i][1] == 1){
+				test.push(trav[i][0]);
+			}
+		}
+		n = test.length;
+		if(ans.length != test.length){
+			message.innerHTML = "INCORRECT";
+		}
+		else {
+			for(var i=0;i<n-1;i+=1){
+				if(ans[i] > ans[i+1]){
+					Ans = false;
+					break;
+				}
+			}
+			if(Ans){
+				//correct
+				message.innerHTML = "CORRECT";
+			}
+			else{
+				//incorrect
+				message.innerHTML = "INCORRECT";
+			}
+		}
+		ans = [];
+	}
+	function addToAns(element) {
+		var id = element.id.split('\n')[0];
+		console.log(id);
+		d3.select("#" + id).select("circle")
+		  		  .style("fill","rgb(158, 208, 62)");
+		var n = id.length;
+		var i = 5;
+		var val = "";
+		while(i<n){val += id[i];i +=1;}
+		ans.push(Number(val));
+		answer.innerHTML = ans.join(', ');
+	}
+	function initialize() {
+		Generate();
+		ans = [];
+		message.innerHTML = "";
+		answer.innerHTML = "";
+		d3.selectAll("g")
+		  .attr("onclick", "addToAns(this)");
+		d3.select("g")
+		  .attr("onclick", "");
+	}
+</script>
+</body>
+</html>
