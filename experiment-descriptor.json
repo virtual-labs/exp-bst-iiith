@@ -69,7 +69,7 @@
     },
     {
       "unit-type": "lu",
-      "label": "BST : Insert",
+      "label": "BST-Insert",
       "basedir": "bst-insert",
       "units": [
         {
@@ -84,14 +84,14 @@
         },
         {
           "unit-type": "task",
-          "label": "BST : Insert Algorithm",
+          "label": "BST-Insert Algorithm",
           "content-type": "video",
           "source": "bst-insert-algorithm.md",
           "target": "bst-insert-algorithm.html"
         },
         {
           "unit-type": "task",
-          "label": "BST : Insert Demo",
+          "label": "BST-Insert Demo",
           "content-type": "simulation",
           "source": "simulation/bstInsert.html",
           "target": "bstInsert.html"
@@ -99,7 +99,7 @@
 	
         {
          "unit-type": "task",
-         "label": "BST : Insert Quiz",
+         "label": "BST-Insert Quiz",
          "content-type": "assesment",
          "source": "bst-insert-quiz.js",
          "target": "bst-insert-quiz.html"
@@ -109,7 +109,7 @@
 
 {
       "unit-type": "lu",
-      "label": "BST : Search",
+      "label": "BST-Search",
       "basedir": "bst-search",
       "units": [
         {
@@ -124,21 +124,21 @@
         },
         {
           "unit-type": "task",
-          "label": "BST : Search Algorithm",
+          "label": "BST-Search Algorithm",
           "content-type": "video",
           "source": "bst-search-algorithm.md",
           "target": "bst-search-algorithm.html"
         },
         {
           "unit-type": "task",
-          "label": "BST : Insert Demo",
+          "label": "BST-Insert Demo",
           "content-type": "simulation",
           "source": "simulation/bstSearch.html",
           "target": "bstSearch.html"
         },
 	{
           "unit-type": "task",
-          "label": "BST : Search Practice",
+          "label": "BST-Search Practice",
           "content-type": "simulation",
           "source": "simulation/bstSearchPractice.html",
           "target": "bstSearchPractice.html"
@@ -148,7 +148,7 @@
     },
 {
       "unit-type": "lu",
-      "label": "BST : Delete",
+      "label": "BST-Delete",
       "basedir": "bst-delete",
       "units": [
         {
@@ -163,28 +163,28 @@
         },
         {
           "unit-type": "task",
-          "label": "BST : Delete Algorithm",
+          "label": "BST-Delete Algorithm",
           "content-type": "video",
           "source": "bst-delete-algorithm.md",
           "target": "bst-delete-algorithm.html"
         },
         {
           "unit-type": "task",
-          "label": "BST : Delete Demo",
+          "label": "BST-Delete Demo",
           "content-type": "simulation",
           "source": "simulation/bstDelete.html",
           "target": "bstDelete.html"
         },
 	{
           "unit-type": "task",
-          "label": "BST : Delete Exercise",
+          "label": "BST-Delete Exercise",
           "content-type": "simulation",
           "source": "simulation/bstDeleteExercise.html",
           "target": "bstDeleteExercise.html"
         },
         {
          "unit-type": "task",
-         "label": "BST : Delete Quiz",
+         "label": "BST-Delete Quiz",
          "content-type": "assesment",
          "source": "bst-delete-quiz.js",
          "target": "bst-delete-quiz.html"
