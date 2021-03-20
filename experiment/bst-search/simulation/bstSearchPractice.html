@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>BST Search Artefact</title>
+  <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+  <link href="css/style_main.css" rel="stylesheet">
+
+	<link rel="stylesheet" 
+    href="tatic/lib/jquery-ui-1.8.11.custom.css">
+        <link rel="stylesheet" href="../../assets/css/common-styles.css">	
+</head>
+
+<body onload="init();" class="VisualizationMainPage">
+	<div id="container">
+
+		<div class="instruction-box">
+            <button class="collapsible">Instructions</button>
+            <div class="content">
+  	            <ul>
+					<li>The goal of this artefact is to thouroughly understand the algorithm involved in searching for an element in BST</li>
+					<li>Starting from the root of the tree, you have to predict if the pointer will go to the right or the left child of the node at each step.</li>
+					<li>Click on <b>Right</b> to go Right and <b>Left</b> to go Left</li>
+					<li>Once you have found the node correctly,click <b>Verify</b> to verify and then you can click on <b>Next</b> to practise another problem.</li>
+                </ul>
+            </div>
+        </div>
+        
+		<div id="mainContent" style="margin-top:30px;">
+
+     <div id="algoControlSection">
+          <div id="AllInput">
+                  <input type="hidden" class="text-box" placeholder="Enter Number" value="21" id="bst-demo-insert-text" />
+		  <button class="button-input" id="bst-demo-insert-btn" style="display: none">Insert</button>
+		  <button class="button-input" id="bst-demo-search-btn" style="display: none">Search</button>
+		  <button class="button-input" id="bst-demo-left-btn"> \( \Leftarrow \) Left</button>
+		  <button class="button-input" id="bst-demo-next-btn">Next</button>
+		  <button class="button-input" id="bst-demo-verify-btn">Verify</button>
+		  <button class="button-input" id="bst-demo-right-btn">Right \( \Rightarrow \)</button>		  
+           </div>
+      </div>
+      <div class="comment-box" style="height:12vh;">
+           <p id="ins">Find 21</p>
+      </div>
+			
+
+			<!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
+			<canvas id="canvas" width="1000" height="500"></canvas>
+			<div id="generalAnimationControlSection" class="sr-only">
+				<table id="GeneralAnimationControls"> </table>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<script type="text/javascript"
+    src="static/lib/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript"
+    src="static/lib/jquery-ui-1.8.11.custom.min.js"></script>
+	<script type="text/javascript"
+		src="/static/lib/animation/CustomEvents.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/UndoFunctions.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedObject.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedLabel.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedCircle.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedRectangle.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedLinkedList.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/HighlightCircle.js"> </script>
+	<script type="text/javascript" 
+    src="static/lib/animation/Line.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/ObjectManager.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimationMain.js"> </script>
+	<script type="text/javascript" 
+    src="static/lib/animation/Algorithm.js"> </script>
+	<script type="text/javascript" 
+	src="js/bstSearchPractice.js"> </script>
+	<script type="text/javascript" async
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  	</script>
+        <script src="../../assets/js/instruction-box.js"></script>
+        </body>
+</body>
+</html>

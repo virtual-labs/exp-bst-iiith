@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <title>Binary Search Tree: Delete</title>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+  <script src="/build/code/static/libs/d3.min.js"></script>
+</head>
+<body>
+Click on the generate graph button to get a randomly genrated BST
+<div class="instruction">
+  <b>Instructions:</b></br>
+  Enter the value to be deleted in the text-box and click the delete button.
+</div>
+<button type="button" id="generate_question" onclick="Generate();">Generate a random BST</button>
+<div id="graph"></div>
+<span id="msg"></span></br>
+<input type="number" id="value" value="" onkeypress="handleKeyPress(event)" autofocus placeholder="Enter value of the node to delete" size="25">
+<button type="button" id="solution_button" onclick="DeleteNode();">Delete</button>
+<script src="../js/BST.js" charset="utf-8"></script>
+<script src="../js/graph.js" charset="utf-8"></script>
+</body>
+</html>
