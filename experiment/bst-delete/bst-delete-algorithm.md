@@ -1,4 +1,4 @@
-Deleting a node from a BST
+### Deleting a node from a BST
 
 For deletion, we come across three different cases depending in the location of the node and its aadjacent node. let x be the key of the node to be deleted, then deletion works as follows.
 
