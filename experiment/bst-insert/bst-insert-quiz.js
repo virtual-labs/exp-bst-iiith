@@ -112,7 +112,7 @@
     },
 
 {
-      question: "3.Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 3 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the post-order traversal sequence of the resultant tree?",  ///// Write the question inside double quotes
+      question: "3. Suppose the numbers 7, 5, 1, 8, 3, 6, 0, 9, 4, 3 are inserted in that order into an initially empty binary search tree. The binary search tree uses the usual ordering on natural numbers. What is the post-order traversal sequence of the resultant tree?",  ///// Write the question inside double quotes
       answers: {
         a: "0 2 4 3 1 6 5 9 8 7",                  ///// Write the option 1 inside double quotes
         b: "9 8 6 4 2 3 0 1 5 9  ",                  ///// Write the option 2 inside double quotes

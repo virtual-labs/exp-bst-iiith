@@ -1,3 +1,6 @@
+### Concept of Binary Search Tree
+<iframe src="https://www.youtube.com/embed/3fQzv9wyWKw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 ### A binary search tree as a special case of a binary tree.
 <img src="images/quizAnswer.png"/>
 
