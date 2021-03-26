@@ -1,16 +1,15 @@
 
-### A Short Introduction to the Overall Experiment
-
 <iframe src="https://www.youtube.com/embed/lH-lGR8VdSo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Motivation
 For large amounts of input, the linear access time of linked lists is prohibitive – weiss
+
 ### Prerequisites of the Experiment
 
 
-  -  Basic knowledge of [trees (data structure), and binary trees](10.4.12.203/bst/artefacts/build/code/static/videos/BinaryTree.mp4) in particular.
-  -  Familiarity with programming concepts such as [composite data structures](10.4.12.203/bst/artefacts/build/code/static/videos/Pointers%20and%20Structs.mp4).
-  -  Calculation of [basic time and space complexity](10.4.12.203/bst/artefacts/build/code/static/videos/Complexity.mp4).
+  -  Basic knowledge of trees (data structure), and binary trees
+  -  Familiarity with programming concepts such as composite data structures 
+  -  Calculation of basic time and space complexity 
   - And above all, a curiosity to learn and explore..!
 
 Click on the above links for short videos elaborating each of the concepts.
