@@ -13,14 +13,7 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    
-    {
-      "unit-type": "task",
-      "label": "Pre Test Quiz",
-      "content-type": "assesment",
-      "source": "pretest.js",
-      "target": "pretest.html"
-    },
+
     {
       "unit-type": "lu",
       "label": "BST",
@@ -43,15 +36,7 @@
           "content-type": "video",
           "source": "bst-properties.md",
           "target": "bst-properties.html"
-        },
-        
-	{
-         "unit-type": "task",
-         "label": " Quiz",
-         "content-type": "assesment",
-         "source": "binary-search-tree-quiz.js",
-         "target": "binary-search-tree-quiz.html"
-       }
+        }
       
       ]
     },
@@ -83,15 +68,7 @@
           "content-type": "simulation",
           "source": "simulation/bstInsert.html",
           "target": "bstInsert.html"
-        },
-	
-        {
-         "unit-type": "task",
-         "label": " Quiz",
-         "content-type": "assesment",
-         "source": "bst-insert-quiz.js",
-         "target": "bst-insert-quiz.html"
-       }
+        }
       ]
     },
 
@@ -163,14 +140,7 @@
           "content-type": "simulation",
           "source": "simulation/bstDeleteExercise.html",
           "target": "bstDeleteExercise.html"
-        },
-        {
-         "unit-type": "task",
-         "label": " Quiz",
-         "content-type": "assesment",
-         "source": "bst-delete-quiz.js",
-         "target": "bst-delete-quiz.html"
-       }
+        }
       ]
     },
 
@@ -204,23 +174,8 @@
           "content-type": "video",
           "source": "relationships.md",
           "target": "relationships.html"
-        },
-        {
-          "unit-type": "task",
-          "label": " Quiz",
-          "content-type": "assesment",
-          "source": "analysis-quiz.js",
-          "target": "analysis-quiz.html"
         }
       ]
-    },
-     
-    {
-      "unit-type": "task",
-      "label": "Post Test Quiz",
-      "content-type": "assesment",
-      "source": "posttest.js",
-      "target": "posttest.html"
     },
        
     {
