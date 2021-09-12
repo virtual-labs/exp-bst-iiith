@@ -13,7 +13,14 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-
+    
+    {
+      "unit-type": "task",
+      "label": "Pre Test Quiz",
+      "content-type": "assesment",
+      "source": "pretest.json",
+      "target": "pretest.html"
+    },
     {
       "unit-type": "lu",
       "label": "BST",
@@ -36,7 +43,15 @@
           "content-type": "video",
           "source": "bst-properties.md",
           "target": "bst-properties.html"
-        }
+        },
+        
+	{
+         "unit-type": "task",
+         "label": " Quiz",
+         "content-type": "assesment",
+         "source": "binary-search-tree-quiz.json",
+         "target": "binary-search-tree-quiz.html"
+       }
       
       ]
     },
@@ -68,7 +83,15 @@
           "content-type": "simulation",
           "source": "simulation/bstInsert.html",
           "target": "bstInsert.html"
-        }
+        },
+	
+        {
+         "unit-type": "task",
+         "label": " Quiz",
+         "content-type": "assesment",
+         "source": "bst-insert-quiz.json",
+         "target": "bst-insert-quiz.html"
+       }
       ]
     },
 
@@ -101,8 +124,14 @@
           "content-type": "simulation",
           "source": "simulation/bstSearchPractice.html",
           "target": "bstSearchPractice.html"
-        }
-        
+        },
+        {
+          "unit-type": "task",
+          "label": " Quiz",
+          "content-type": "assesment",
+          "source": "bst-search-quiz.json",
+          "target": "bst-search-quiz.html"
+        }        
       ]
     },
 {
@@ -140,7 +169,14 @@
           "content-type": "simulation",
           "source": "simulation/bstDeleteExercise.html",
           "target": "bstDeleteExercise.html"
-        }
+        },
+        {
+         "unit-type": "task",
+         "label": " Quiz",
+         "content-type": "assesment",
+         "source": "bst-delete-quiz.json",
+         "target": "bst-delete-quiz.html"
+       }
       ]
     },
 
@@ -174,8 +210,22 @@
           "content-type": "video",
           "source": "relationships.md",
           "target": "relationships.html"
+        },
+        {
+          "unit-type": "task",
+          "label": " Quiz",
+          "content-type": "assesment",
+          "source": "analysis-quiz.json",
+          "target": "analysis-quiz.html"
         }
       ]
+    },
+    {
+      "unit-type": "task",
+      "label": "Post Test Quiz",
+      "content-type": "assesment",
+      "source": "posttest.json",
+      "target": "posttest.html"
     },
        
     {
