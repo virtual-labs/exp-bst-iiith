@@ -18,7 +18,7 @@
       "unit-type": "task",
       "label": "Pre Test Quiz",
       "content-type": "assesment",
-      "source": "pretest.js",
+      "source": "pretest.json",
       "target": "pretest.html"
     },
     {
@@ -49,7 +49,7 @@
          "unit-type": "task",
          "label": " Quiz",
          "content-type": "assesment",
-         "source": "binary-search-tree-quiz.js",
+         "source": "binary-search-tree-quiz.json",
          "target": "binary-search-tree-quiz.html"
        }
       
@@ -89,7 +89,7 @@
          "unit-type": "task",
          "label": " Quiz",
          "content-type": "assesment",
-         "source": "bst-insert-quiz.js",
+         "source": "bst-insert-quiz.json",
          "target": "bst-insert-quiz.html"
        }
       ]
@@ -124,8 +124,14 @@
           "content-type": "simulation",
           "source": "simulation/bstSearchPractice.html",
           "target": "bstSearchPractice.html"
-        }
-        
+        },
+        {
+          "unit-type": "task",
+          "label": " Quiz",
+          "content-type": "assesment",
+          "source": "bst-search-quiz.json",
+          "target": "bst-search-quiz.html"
+        }        
       ]
     },
 {
@@ -168,7 +174,7 @@
          "unit-type": "task",
          "label": " Quiz",
          "content-type": "assesment",
-         "source": "bst-delete-quiz.js",
+         "source": "bst-delete-quiz.json",
          "target": "bst-delete-quiz.html"
        }
       ]
@@ -209,17 +215,16 @@
           "unit-type": "task",
           "label": " Quiz",
           "content-type": "assesment",
-          "source": "analysis-quiz.js",
+          "source": "analysis-quiz.json",
           "target": "analysis-quiz.html"
         }
       ]
     },
-     
     {
       "unit-type": "task",
       "label": "Post Test Quiz",
       "content-type": "assesment",
-      "source": "posttest.js",
+      "source": "posttest.json",
       "target": "posttest.html"
     },
        
