@@ -2,7 +2,7 @@
 <iframe src="https://www.youtube.com/embed/lH-lGR8VdSo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ### Motivation
-For large amounts of input, the linear access time of linked lists is prohibitive – weiss
+_"For large amounts of input, the linear access time of linked lists is prohibitive"_ – Mark Allen Weiss
 
 ### Prerequisites of the Experiment
 
@@ -13,18 +13,17 @@ For large amounts of input, the linear access time of linked lists is prohibitiv
   - And above all, a curiosity to learn and explore..!
 
 Click on the above links for short videos elaborating each of the concepts.
-###Overview of the Experiment
+### Overview of the Experiment
 
-The e xperiment features a series of modules with video lectures, hands-on practice exercises and quizzes for self analysis.
-Learning Objectives of the Experiment
-
+The experiment features a series of modules with video lectures, hands-on practice exercises, and quizzes for self analysis.
+### Learning Objectives of the Experiment
 In this experiment on Binary search tree, we will learn the following:
 
-   - Structure, representation and Implementation of BST.
-   - Getting acquainted with Terminologies related to trees, Binary trees and BST.
-   - Binary Search Tree property and differences between a binary tree and a binary search tree.
-   - Operations on BST, their algorithms and time and space complexity analysis.
-   - Uses and relationship with other data structures such as Dictionaries and priority Queues.
+   - Structure, representation and implementation of BST.
+   - Getting acquainted with terminologies related to trees, binary trees and BST.
+   - Binary Search Tree properties and the differences between a binary tree and a binary search tree.
+   - Operations on BST, their algorithms, and time and space complexity analysis.
+   - Uses and relationship with other data structures such as Dictionaries and Priority Queues.
    - Applications of a BST in searching, sorting etc.
 
 ### Experiment Modules and their Weightage
