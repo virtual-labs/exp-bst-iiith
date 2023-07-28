@@ -1,0 +1,33 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. Following is the image of a binary search tree rooted at 4 <br><img src=\"images/quiz_q1.png\"><br>(which child is left and which is right is arbitrary, but assigned so to maintain validity of the tree). Which of the following can be the nodes you visit when searching for the number 10.",
+            "answers": {
+                "a": "4 6 7 10",
+                "b": "4 6 7 8",
+                "c": "4 3 1 2",
+                "d": "4 6 5 10"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "b": "10 is never found, but the search path leads till 8."
+            },
+            "difficulty": "advanced"
+        },
+        {
+            "question": "2. To find the smallest element in the subtree of a given node, we:",
+            "answers": {
+                "a": "Go recursively into the left child of the current node, and stop when no left child exists.",
+                "b": "Go recursively into the left child of the current node, go to the right child otherwise, and stop when neither one exists.",
+                "c": "Go recursively into the right child of the current node, and stop when no left child exists.",
+                "d": "Go recursively into the right child of the current node, go to the right child otherwise, and stop when neither one exists."
+            },
+            "correctAnswer": "a",
+            "explanations": {
+                "a": "You want to find the leftmost element in the tree, never go right."
+            },
+            "difficulty": "intermediate"
+        }
+    ]
+}
