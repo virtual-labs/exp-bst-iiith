@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "experiment name": "Experiment Name",
+    "problems": [
+        {
+            "problem name": "Binary Search Tree",
+            "description": "You are given the list of edges of a directed Binary search tree and the root node along with a target node. . Find if the target node exists in the tree.",
+            "inputs": [
+                [[3,2], [2,1], [3,4], [4,5], [4,6]],
+                1,
+                5
+            ],
+            "expected": false,
+            "inputs description": "Input consists of an array of edges -inp1 as [node1, node2]. The other input is the root node - inp2 and the target node - inp3",
+            "expected description": "An array of nodes in the correct order of visitation"
+        }
+    ]
+}
