@@ -1,0 +1,52 @@
+[{
+    "question": "1. The number of edges from the root to the node is called __________ of the tree.",
+    "answers": {
+                "a": "Length",
+                "b": "Width",
+                "c": "Depth",
+                "d": "Height"
+            },
+            "correctAnswer": "c"
+        },
+
+    {  
+      "question": "2. The number of edges from the node to the deepest leaf is called _________ of the tree.", 
+      "answers": {
+        "a": "Height",
+        "b": "Depth", 
+	    "c": "Width ", 
+        "d": "Length"
+        },
+      "correctAnswer": "a"
+    },
+    {
+      "question": "3. What is a full binary tree?",
+      "answers": {
+        "a": "Each node has exactly two children",
+        "b": "Each node has exactly one or two children ",
+	    "c": "Each node has exactly zero or two children  ",
+        "d": "All the leaves are at the same level"
+        },
+      "correctAnswer": "c"
+    },
+    {
+      "question": "4. What is a complete binary tree? ",
+      "answers": {
+        "a": "A binary tree, which is completely filled, with the possible exception of the bottom level, which is filled from left to right ",
+        "b": "Each node has exactly zero or two children ",
+	    "c": "A tree In which all nodes have degree 2",
+        "d": "A binary tree, which is completely filled, with the possible exception of the bottom level, which is filled from right to left"
+        },
+      "correctAnswer": "a"
+    },
+    {
+    "question": "5. Which of the following is not an advantage of trees? ",
+    "answers": {
+        "a": "Hierarchical structure  ",
+        "b": "Router algorithms  ",
+	    "c": "Faster search",
+        "d": " Undo/Redo operations in a notepad"
+        },
+    "correctAnswer": "d"
+    }
+]
