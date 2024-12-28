@@ -1,0 +1,54 @@
+{
+    "version": 1,
+    "experiment name": "Experiment Name",
+    "problems": [
+        {
+            "problem name": "Binary Search Tree",
+            "description": "You are given a binary search tree and a target node. Perform a depth-first search (DFS) starting from the root node and return the order of visitation following the properties of the binary search tree. If the target node is found during the traversal, include it in the result. If the target node is not found, return the route taken.",
+            "inputs": [
+                {
+                    "val": 3,
+                    "left": {
+                        "val": 2,
+                        "left": {
+                            "val": 1,
+                            "left": null,
+                            "right": null
+                        },
+                        "right": null
+                    },
+                    "right": {
+                        "val": 4,
+                        "left": null,
+                        "right": {
+                            "val": 5,
+                            "left": null,
+                            "right": {
+                                "val": 6,
+                                "left": null,
+                                "right": null
+                            }
+                        }
+                    }
+                },
+                5
+            ],
+            "expected": [3,4,5],
+            "inputs description": "Input consists of a binary search tree represented as a nested dictionary and a target node.",
+            "expected description": "An array of nodes in the order they are visited during the DFS traversal following the properties of the BST.",
+            "difficulty": "beginner"
+        },
+        {
+            "problem name": "Validate Binary Search Tree",
+            "description": "Given a list of values representing a binary search tree, determine if it is a valid BST. In a binary search tree, for every node, the left subtree contains only nodes with values less than the node's value, and the right subtree contains only nodes with values greater than the node's value.",
+            "inputs": [
+                [10, 5, 15, 1, 7, 12, 20]
+            ],
+            "expected": true,
+            "inputs description": "An array of integers representing the values to construct a binary search tree. Nodes are sequentially placed in an array, with each node at index i having its left child at 2i + 1 and its right child at 2i + 2.",
+            "expected description": "A boolean indicating whether the given tree is a valid binary search tree.",
+            "difficulty": "intermediate"
+        }
+
+    ]
+}

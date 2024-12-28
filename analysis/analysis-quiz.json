@@ -1,0 +1,61 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. Time complexity of searching in a binary search tree is",
+            "answers": {
+                "a": "O(n^2)",
+                "b": "O(n log n)",
+                "c": "O(n)",
+                "d": "O(log n)"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "All operations are order height, so they are all O(n) since the tree can be highly unbalanced."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "2. Time complexity of deleting from a binary search tree is",
+            "answers": {
+                "a": "O(n^2)",
+                "b": "O(n log n)",
+                "c": "O(n)",
+                "d": "O(log n)"
+            },
+            "correctAnswer": "c",
+            "explanations": {
+                "c": "All operations are order height, so they are all O(n) since the tree can be highly unbalanced."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "3. Time complexity of deleting from a balanced binary search tree is",
+            "answers": {
+                "a": "O(n^2)",
+                "b": "O(n log n)",
+                "c": "O(n)",
+                "d": "O(log n)"
+            },
+            "correctAnswer": "d",
+            "explanations": {
+                "d": "All operations are order height, so they are all O(log n) since the tree is given to be balanced."
+            },
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "4. If all the queries in a BST come after all the insertions and deletions, then which of the following algorithms is faster than a BST at the same task:",
+            "answers": {
+                "a": "Sorting and two pointers",
+                "b": "Sorting and binary search",
+                "c": "Binary Search and two pointers",
+                "d": "Merge Sort Tree"
+            },
+            "correctAnswer": "b",
+            "explanations": {
+                "b": "The static version of binary search tree is just binary search."
+            },
+            "difficulty": "beginner"
+        }
+    ]
+}
