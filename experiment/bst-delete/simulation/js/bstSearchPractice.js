@@ -377,7 +377,7 @@ BST.prototype.insert = function(elem, tree)
 			this.insert(elem, tree.left);
 		}
 	}
-	else
+	else if(elem.data>tree.data)
 	{
 		if (tree.right == null)
 		{
@@ -399,6 +399,11 @@ BST.prototype.insert = function(elem, tree)
 			this.insert(elem, tree.right);
 		}
 	}
+	
+	else{
+    	this.cmd('Delete', elem.graphicID) // Remove the circle representing the duplicate element
+    	this.cmd('Step') // Optional step to pause for visualization
+  	}
 	
 	
 }
