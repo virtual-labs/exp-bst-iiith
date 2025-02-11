@@ -163,74 +163,63 @@ BST.prototype.insertElement = function(insertedValue)
 	return this.commands;
 }
 
+BST.prototype.insert = function(elem, tree) {
+    this.cmd("SetHighlight", tree.graphicID, 1);
+    this.cmd("SetHighlight", elem.graphicID, 1);
 
-BST.prototype.insert = function(elem, tree)
-{
-	this.cmd("SetHighlight", tree.graphicID , 1);
-	this.cmd("SetHighlight", elem.graphicID , 1);
-	
-	if (elem.data < tree.data)
-	{
-		this.cmd("SetText", 0,  elem.data + " < " + tree.data + ".  Looking at left subtree");				
-	}
-	else if(elem.data==tree.data){
-		this.cmd("SetText", 0,  elem.data + " = " + tree.data + ".  Duplicate entries are not allowed in a BST");				
-	}
-	else
-	{
-		this.cmd("SetText",  0, elem.data + " >= " + tree.data + ".  Looking at right subtree");				
-	}
-	this.cmd("Step");
-	this.cmd("SetHighlight", tree.graphicID, 0);
-	this.cmd("SetHighlight", elem.graphicID, 0);
-	
-	if (elem.data < tree.data)
-	{
-		if (tree.left == null)
-		{
-			this.cmd("SetText", 0,"Found null tree, inserting element");				
-			
-			this.cmd("SetHighlight", elem.graphicID, 0);
-			tree.left=elem;
-			elem.parent = tree;
-			this.cmd("Connect", tree.graphicID, elem.graphicID, BST.LINK_COLOR);
-		}
-		else
-		{
-			this.cmd("CreateHighlightCircle", this.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
-			this.cmd("Move", this.highlightID, tree.left.x, tree.left.y);
-			this.cmd("Step");
-			this.cmd("Delete", this.highlightID);
-			this.insert(elem, tree.left);
-		}
-	}
-	else if(elem.data > tree.data)
-	{
-		if (tree.right == null)
-		{
-			this.cmd("SetText",  0, "Found null tree, inserting element");				
-			this.cmd("SetHighlight", elem.graphicID, 0);
-			tree.right=elem;
-			elem.parent = tree;
-			this.cmd("Connect", tree.graphicID, elem.graphicID, BST.LINK_COLOR);
-			elem.x = tree.x + BST.WIDTH_DELTA/2;
-			elem.y = tree.y + BST.HEIGHT_DELTA
-			this.cmd("Move", elem.graphicID, elem.x, elem.y);
-		}
-		else
-		{
-			this.cmd("CreateHighlightCircle", this.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
-			this.cmd("Move", this.highlightID, tree.right.x, tree.right.y);
-			this.cmd("Step");
-			this.cmd("Delete", this.highlightID);
-			this.insert(elem, tree.right);
-		}
-	}
-	else{
-    	this.cmd('Delete', elem.graphicID) // Remove the circle representing the duplicate element
-    	this.cmd('Step') // Optional step to pause for visualization
-  	}
-	
+    // Ensure elem.data and tree.data are numbers
+    const elemData = Number(elem.data);
+    const treeData = Number(tree.data);
+
+    if (elemData < treeData) {
+        this.cmd("SetText", 0, elemData + " < " + treeData + ".  Looking at left subtree");
+        displayComment(elemData + " < " + treeData + ".  Looking at left subtree");
+    } else if (elemData === treeData) {
+        this.cmd("SetText", 0, elemData + " = " + treeData + ".  Duplicate entries are not allowed in a BST");
+    } else {
+        this.cmd("SetText", 0, elemData + " >= " + treeData + ".  Looking at right subtree");
+    }
+    this.cmd("Step");
+    this.cmd("SetHighlight", tree.graphicID, 0);
+    this.cmd("SetHighlight", elem.graphicID, 0);
+
+    if (elemData < treeData) {
+        if (tree.left == null) {
+            this.cmd("SetText", 0, "Found null tree, inserting element");
+            displayComment("Found null tree, inserting element");
+
+            this.cmd("SetHighlight", elem.graphicID, 0);
+            tree.left = elem;
+            elem.parent = tree;
+            this.cmd("Connect", tree.graphicID, elem.graphicID, BST.LINK_COLOR);
+        } else {
+            this.cmd("CreateHighlightCircle", this.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
+            this.cmd("Move", this.highlightID, tree.left.x, tree.left.y);
+            this.cmd("Step");
+            this.cmd("Delete", this.highlightID);
+            this.insert(elem, tree.left);
+        }
+    } else if (elemData > treeData) {
+        if (tree.right == null) {
+            this.cmd("SetText", 0, "Found null tree, inserting element");
+            this.cmd("SetHighlight", elem.graphicID, 0);
+            tree.right = elem;
+            elem.parent = tree;
+            this.cmd("Connect", tree.graphicID, elem.graphicID, BST.LINK_COLOR);
+            elem.x = tree.x + BST.WIDTH_DELTA / 2;
+            elem.y = tree.y + BST.HEIGHT_DELTA;
+            this.cmd("Move", elem.graphicID, elem.x, elem.y);
+        } else {
+            this.cmd("CreateHighlightCircle", this.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
+            this.cmd("Move", this.highlightID, tree.right.x, tree.right.y);
+            this.cmd("Step");
+            this.cmd("Delete", this.highlightID);
+            this.insert(elem, tree.right);
+        }
+    } else {
+        this.cmd('Delete', elem.graphicID); // Remove the circle representing the duplicate element
+        this.cmd('Step'); // Optional step to pause for visualization
+    }
 }
 
 
