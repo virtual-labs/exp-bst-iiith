@@ -46,7 +46,6 @@ BST.PRINT_VERTICAL_GAP  = 20;
 BST.PRINT_HORIZONTAL_GAP = 50;
 BST.INSERT_NOS = 0;
 
-
 function BST(am, w, h)
 {
 	this.init(am, w, h);
@@ -55,8 +54,6 @@ function BST(am, w, h)
 BST.prototype = new Algorithm();
 BST.prototype.constructor = BST;
 BST.superclass = Algorithm.prototype;
-
-
 
 BST.prototype.init = function(am, w, h)
 {
@@ -74,10 +71,8 @@ BST.prototype.init = function(am, w, h)
 	this.nextIndex = 1;
 	this.animationManager.StartNewAnimation(this.commands);
 	this.animationManager.skipForward();
-	this.animationManager.clearHistory();
-	
+	this.animationManager.clearHistory();	
 }
-
 
 BST.prototype.addControls =  function()
 {
@@ -87,7 +82,6 @@ BST.prototype.addControls =  function()
 	this.insertButton.onclick = this.insertCallback.bind(this);
 	this.resetButton = document.getElementById("bst-demo-reset-btn");
 	this.resetButton.onclick = function() {location.reload();};
-
 }
 
 BST.prototype.reset = function()
@@ -102,13 +96,10 @@ BST.prototype.insertCallback = function(event)
 		displayComment("Invalid Input. Kindly enter a 2 digit whole number");
 		return;
 	}
-	
-
 	var insertedValue = this.insertField.value;
-	// Get text value
-	insertedValue = this.normalizeNumber(insertedValue, 2);
-	if (insertedValue != "")
-	{
+    // Get text value
+    insertedValue = this.normalizeNumber(insertedValue, 2);    
+	if (insertedValue != ""){
 		// set text value
 		this.insertField.value = "";
 		this.implementAction(this.insertElement.bind(this), insertedValue);
@@ -137,8 +128,7 @@ BST.prototype.insertElement = function(insertedValue)
 	this.cmd("SetText", 0, "Inserting "+insertedValue);
 	this.highlightID = this.nextIndex++;
 	
-	if (this.treeRoot == null)
-	{
+	if (this.treeRoot == null){
 		this.cmd("CreateCircle", this.nextIndex, insertedValue,  this.startingX, BST.STARTING_Y);
 		this.cmd("SetForegroundColor", this.nextIndex, BST.FOREGROUND_COLOR);
 		this.cmd("SetBackgroundColor", this.nextIndex, BST.BACKGROUND_COLOR);
@@ -146,94 +136,73 @@ BST.prototype.insertElement = function(insertedValue)
 		this.treeRoot = new BSTNode(insertedValue, this.nextIndex, this.startingX, BST.STARTING_Y)
 		this.nextIndex += 1;
 	}
-	else
-	{
+	else{		
 		this.cmd("CreateCircle", this.nextIndex, insertedValue, 100, 100);
 		this.cmd("SetForegroundColor", this.nextIndex, BST.FOREGROUND_COLOR);
 		this.cmd("SetBackgroundColor", this.nextIndex, BST.BACKGROUND_COLOR);
 		this.cmd("Step");				
 		var insertElem = new BSTNode(insertedValue, this.nextIndex, 100, 100)
-		
-		
+				
 		this.nextIndex += 1;
 		this.cmd("SetHighlight", insertElem.graphicID, 1);
-		this.insert(insertElem, this.treeRoot)
-		this.resizeTree();				
+		this.insert(insertElem, this.treeRoot);
+		this.resizeTree();
 	}
 	this.cmd("SetText", 0, "");				
 	return this.commands;
 }
 
 
-BST.prototype.insert = function(elem, tree)
-{
-	this.cmd("SetHighlight", tree.graphicID , 1);
-	this.cmd("SetHighlight", elem.graphicID , 1);
-	
-	if (elem.data < tree.data)
-	{
-		this.cmd("SetText", 0,  elem.data + " < " + tree.data + ".  Looking at left subtree");				
-	}
-	else
-	{
-		this.cmd("SetText",  0, elem.data + " >= " + tree.data + ".  Looking at right subtree");				
-	}
-	this.cmd("Step");
-	this.cmd("SetHighlight", tree.graphicID, 0);
-	this.cmd("SetHighlight", elem.graphicID, 0);
-	
-	if (elem.data < tree.data)
-	{
-		if (tree.left == null)
-		{
-			this.cmd("SetText", 0,"Found null tree, inserting element");				
-			
-			this.cmd("SetHighlight", elem.graphicID, 0);
-			tree.left=elem;
-			elem.parent = tree;
-			this.cmd("Connect", tree.graphicID, elem.graphicID, BST.LINK_COLOR);
-		}
-		else
-		{
-			this.cmd("CreateHighlightCircle", this.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
-			this.cmd("Move", this.highlightID, tree.left.x, tree.left.y);
-			this.cmd("Step");
-			this.cmd("Delete", this.highlightID);
-			this.insert(elem, tree.left);
-		}
-	}
-	else if(elem.data>tree.data)
-	{
-		if (tree.right == null)
-		{
-			this.cmd("SetText",  0, "Found null tree, inserting element");				
-			this.cmd("SetHighlight", elem.graphicID, 0);
-			tree.right=elem;
-			elem.parent = tree;
-			this.cmd("Connect", tree.graphicID, elem.graphicID, BST.LINK_COLOR);
-			elem.x = tree.x + BST.WIDTH_DELTA/2;
-			elem.y = tree.y + BST.HEIGHT_DELTA
-			this.cmd("Move", elem.graphicID, elem.x, elem.y);
-		}
-		else
-		{
-			this.cmd("CreateHighlightCircle", this.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
-			this.cmd("Move", this.highlightID, tree.right.x, tree.right.y);
-			this.cmd("Step");
-			this.cmd("Delete", this.highlightID);
-			this.insert(elem, tree.right);
-		}
-	}
-	
-	else{
-    	this.cmd('Delete', elem.graphicID) // Remove the circle representing the duplicate element
-    	this.cmd('Step') // Optional step to pause for visualization
-  	}
-	
-	
+BST.prototype.insert = function(elem, tree) {
+    this.cmd("SetHighlight", tree.graphicID , 1);
+    this.cmd("SetHighlight", elem.graphicID , 1);
+    
+    if (elem.data < tree.data) {
+        console.log(`${elem.data} < ${tree.data}. Looking at left subtree`);
+        this.cmd("SetText", 0,  elem.data + " < " + tree.data + ".  Looking at left subtree");                
+        displayComment(elem.data + " < " + tree.data + ".  Looking at left subtree");
+        if (tree.left == null) {
+            console.log(`Found null tree, inserting ${elem.data} as left child of ${tree.data}`);
+            this.cmd("SetText", 0,"Found null tree, inserting element");                
+            displayComment("Found null tree, inserting element"); 
+
+            this.cmd("SetHighlight", elem.graphicID, 0);
+            tree.left = elem;
+            elem.parent = tree;
+            this.cmd("Connect", tree.graphicID, elem.graphicID, BST.LINK_COLOR);
+        } else {
+            this.cmd("CreateHighlightCircle", this.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
+            this.cmd("Move", this.highlightID, tree.left.x, tree.left.y);
+            this.cmd("Step");
+            this.cmd("Delete", this.highlightID);
+            this.insert(elem, tree.left);
+        }
+    } else if (elem.data > tree.data) {
+        console.log(`${elem.data} >= ${tree.data}. Looking at right subtree`);
+        this.cmd("SetText",  0, elem.data + " >= " + tree.data + ".  Looking at right subtree");                
+        if (tree.right == null) {
+            console.log(`Found null tree, inserting ${elem.data} as right child of ${tree.data}`);
+            this.cmd("SetText",  0, "Found null tree, inserting element");                
+            this.cmd("SetHighlight", elem.graphicID, 0);
+            tree.right = elem;
+            elem.parent = tree;
+            this.cmd("Connect", tree.graphicID, elem.graphicID, BST.LINK_COLOR);
+            elem.x = tree.x + BST.WIDTH_DELTA / 2;
+            elem.y = tree.y + BST.HEIGHT_DELTA;
+            this.cmd("Move", elem.graphicID, elem.x, elem.y);
+        } else {
+            this.cmd("CreateHighlightCircle", this.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
+            this.cmd("Move", this.highlightID, tree.right.x, tree.right.y);
+            this.cmd("Step");
+            this.cmd("Delete", this.highlightID);
+            this.insert(elem, tree.right);
+        }
+    } else {
+        console.log(`Duplicate value found: ${elem.data}`);
+        this.cmd('Delete', elem.graphicID); // Remove the circle representing the duplicate element
+        this.cmd('Step'); // Optional step to pause for visualization
+    }
 }
-
-
 
 BST.prototype.resizeTree = function()
 {
