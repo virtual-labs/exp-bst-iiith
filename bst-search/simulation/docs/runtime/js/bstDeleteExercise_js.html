@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-03-15 Mon 20:00 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="VLEAD" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org420a3eb">1. BST  implementation and operations</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#orgd916a18">1.0.0.1. Contains JS code for implementing the Binary  search tree and its operations like insertion, deletion, seraching and traversal.</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgac818c6">1.1. Copyright Details</a></li>
+<li><a href="#org148f83c">1.2. Simulation variables and constants wrapped into class "BST"</a></li>
+<li><a href="#org4600b96">1.3. Initialization of the demo pane</a></li>
+<li><a href="#orge07c7d9">1.4. To Add controls to the artefact</a></li>
+<li><a href="#orgc69d540">1.5. Insert Callback</a></li>
+<li><a href="#org2efae8c">1.6. Insert function</a></li>
+<li><a href="#orgfc87f3e">1.7. Resize Tree</a></li>
+<li><a href="#org202012e">1.8. Node class</a></li>
+<li><a href="#org3f56c14">1.9. UI enable and disable button</a></li>
+</ul>
+</li>
+<li><a href="#orge92789e">2. Tangle</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org420a3eb" class="outline-2">
+<h2 id="org420a3eb"><span class="section-number-2">1</span> BST  implementation and operations</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-orgd916a18" class="outline-5">
+<h5 id="orgd916a18"><span class="section-number-5">1.0.0.1</span> Contains JS code for implementing the Binary  search tree and its operations like insertion, deletion, seraching and traversal.</h5>
+</div>
+<div id="outline-container-orgac818c6" class="outline-3">
+<h3 id="orgac818c6"><span class="section-number-3">1.1</span> Copyright Details</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="org-src-container">
+<pre class="src src-js" id="org7a01e26">
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Copyright 2011 David Galles, University of San Francisco. All rights reserved.</span>
+<span style="font-weight: bold; font-style: italic;">//</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Redistribution and use in source and binary forms, with or without modification, are</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">permitted provided that the following conditions are met:</span>
+<span style="font-weight: bold; font-style: italic;">//</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">1. Redistributions of source code must retain the above copyright notice, this list of</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">conditions and the following disclaimer.</span>
+<span style="font-weight: bold; font-style: italic;">//</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">2. Redistributions in binary form must reproduce the above copyright notice, this list</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">of conditions and the following disclaimer in the documentation and/or other materials</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">provided with the distribution.</span>
+<span style="font-weight: bold; font-style: italic;">//</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">THIS SOFTWARE IS PROVIDED BY David Galles ``AS IS'' AND ANY EXPRESS OR IMPLIED</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL &lt;COPYRIGHT HOLDER&gt; OR</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</span>
+<span style="font-weight: bold; font-style: italic;">//</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">The views and conclusions contained in the software and documentation are those of the</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">authors and should not be interpreted as representing official policies, either expressed</span>
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">or implied, of the University of San Francisco</span>
+
+
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org148f83c" class="outline-3">
+<h3 id="org148f83c"><span class="section-number-3">1.2</span> Simulation variables and constants wrapped into class "BST"</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+<pre class="src src-js" id="org9080cdb">
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Class to keep track of pointer and search things:</span>
+
+<span style="font-weight: bold;">const</span> <span style="font-weight: bold; font-style: italic;">displayComment</span> = <span style="font-weight: bold;">function</span> displayComment(<span style="font-weight: bold; font-style: italic;">str</span>){
+        document.getElementById(<span style="font-style: italic;">"ins"</span>).innerHTML = str
+}
+
+<span style="font-weight: bold;">class</span> trackThings {
+        constructor(){
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.dataToID = []
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.problems = [1,27,12,31,18,5]
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.answers = [3,31,16,33,23,9]
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.problemTracker = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.lastHighlight = <span style="font-weight: bold; text-decoration: underline;">null</span>
+        }
+
+}
+trackThings.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setup = <span style="font-weight: bold;">function</span>(){
+        <span style="font-weight: bold;">for</span>(i=0;i&lt;BST.DATA.length;i++){
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.dataToID[BST.DATA[i]] = 2*(i+1);
+        }
+}
+
+<span style="font-weight: bold;">let</span> <span style="font-weight: bold; font-style: italic;">demoTrack</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">trackThings</span>();
+
+<span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Constants.</span>
+
+BST.LINK_COLOR = <span style="font-style: italic;">"#000000"</span>;
+BST.HIGHLIGHT_CIRCLE_COLOR = <span style="font-style: italic;">"#000000"</span>;
+BST.FOREGROUND_COLOR = <span style="font-style: italic;">"#000000"</span>;
+BST.BACKGROUND_COLOR = <span style="font-style: italic;">"#FFFFFF"</span>;
+BST.PRINT_COLOR = BST.FOREGROUND_COLOR;
+
+BST.WIDTH_DELTA  = 50;
+BST.HEIGHT_DELTA = 50;
+BST.STARTING_Y = 50;
+
+
+BST.FIRST_PRINT_POS_X  = 50;
+BST.PRINT_VERTICAL_GAP  = 20;
+BST.PRINT_HORIZONTAL_GAP = 50;
+
+BST.DATA = [16,3,18,1,5,27,12,23,33,9,31,37];
+
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">BST</span>(<span style="font-weight: bold; font-style: italic;">am</span>, <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">h</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.init(am, w, h);
+}
+
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Algorithm</span>();
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.constructor = BST;
+BST.superclass = Algorithm.<span style="font-weight: bold; text-decoration: underline;">prototype</span>;
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4600b96" class="outline-3">
+<h3 id="org4600b96"><span class="section-number-3">1.3</span> Initialization of the demo pane</h3>
+<div class="outline-text-3" id="text-1-3">
+<div class="org-src-container">
+<pre class="src src-js" id="org34d552b">BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.init = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">am</span>, <span style="font-weight: bold; font-style: italic;">w</span>, <span style="font-weight: bold; font-style: italic;">h</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">sc</span> = BST.superclass;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.startingX =  w / 2;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.first_print_pos_y  = h - 2 * BST.PRINT_VERTICAL_GAP;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.print_max  = w - 10;
+
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">fn</span> = sc.init;
+        fn.call(<span style="font-weight: bold; text-decoration: underline;">this</span>,am);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.addControls();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex = 0;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.commands = [];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateLabel"</span>, 0, <span style="font-style: italic;">""</span>, 20, 10, 0);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animationManager.StartNewAnimation(<span style="font-weight: bold; text-decoration: underline;">this</span>.commands);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animationManager.skipForward();
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animationManager.clearHistory();
+        
+}
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge07c7d9" class="outline-3">
+<h3 id="orge07c7d9"><span class="section-number-3">1.4</span> To Add controls to the artefact</h3>
+<div class="outline-text-3" id="text-1-4">
+<div class="org-src-container">
+<pre class="src src-js" id="orgfccbe78">BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.addControls =  <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertField =  document.getElementById(<span style="font-style: italic;">"bst-demo-insert-text"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertField.onkeydown = <span style="font-weight: bold; text-decoration: underline;">this</span>.returnSubmit(<span style="font-weight: bold; text-decoration: underline;">this</span>.insertField,  <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>), 4);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.submitField = document.getElementById(<span style="font-style: italic;">"bst-demo-submit-text"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.submitButton = document.getElementById(<span style="font-style: italic;">"bst-demo-submit-btn"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.submitButton.onclick = <span style="font-weight: bold; text-decoration: underline;">this</span>.submitAnswer.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton = document.getElementById(<span style="font-style: italic;">"bst-demo-insert-btn"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.onclick = <span style="font-weight: bold; text-decoration: underline;">this</span>.insertCallback.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextProblemButton = document.getElementById(<span style="font-style: italic;">"bst-demo-next-btn"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextProblemButton.onclick = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextProblem.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>);
+}
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.submitAnswer = <span style="font-weight: bold;">function</span>(){
+        <span style="font-weight: bold;">if</span>(demoTrack.answers[demoTrack.problemTracker] == <span style="font-weight: bold; text-decoration: underline;">this</span>.submitField.value){
+                displayComment(<span style="font-style: italic;">"Correct Answer. &lt;br&gt; Click on 'Next' for next problem."</span>)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightEle(<span style="font-weight: bold; text-decoration: underline;">this</span>.submitField.value,1)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.nextProblemButton.disabled = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        } 
+        <span style="font-weight: bold;">else</span> {
+                displayComment(<span style="font-style: italic;">"Incorrect, Please Try Again."</span>);
+        }
+}
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.nextProblem = <span style="font-weight: bold;">function</span>(){
+        <span style="font-weight: bold;">if</span>(demoTrack.lastHighlight) {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightEle(demoTrack.lastHighlight,0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightEle(<span style="font-weight: bold; text-decoration: underline;">this</span>.submitField.value,0)
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.submitField.value=<span style="font-style: italic;">""</span>
+        demoTrack.problemTracker = (demoTrack.problemTracker+1)%demoTrack.problems.length;
+        displayComment(<span style="font-style: italic;">"Find and enter the successor of "</span>+ demoTrack.problems[demoTrack.problemTracker] );
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightEle(demoTrack.problems[demoTrack.problemTracker],1);
+        demoTrack.lastHighlight = demoTrack.problems[demoTrack.problemTracker];
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextProblemButton.disabled = <span style="font-weight: bold; text-decoration: underline;">true</span>
+}
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.highlightEle = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">ele</span>,<span style="font-weight: bold; font-style: italic;">toggle</span>){
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.commands=[]
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, demoTrack.dataToID[ele], toggle);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animationManager.StartNewAnimation(<span style="font-weight: bold; text-decoration: underline;">this</span>.commands);
+}
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.reset = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex = 1;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+}
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc69d540" class="outline-3">
+<h3 id="orgc69d540"><span class="section-number-3">1.5</span> Insert Callback</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+Called at the event on the insert button being pressed.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js" id="org8ec5e19">BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertCallback = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">insertedValue</span> = <span style="font-weight: bold; text-decoration: underline;">this</span>.insertField.value;
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Get text value</span>
+        insertedValue = <span style="font-weight: bold; text-decoration: underline;">this</span>.normalizeNumber(insertedValue, 2);
+        <span style="font-weight: bold;">if</span> (insertedValue != <span style="font-style: italic;">""</span>)
+        {
+                <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">set text value</span>
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insertField.value = <span style="font-style: italic;">""</span>;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.implementAction(<span style="font-weight: bold; text-decoration: underline;">this</span>.insertElement.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>), insertedValue);
+        }
+}
+
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertAuto = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">insertedValue</span>)
+{
+        <span style="font-weight: bold; font-style: italic;">// </span><span style="font-weight: bold; font-style: italic;">Get text value</span>
+        insertedValue = <span style="font-weight: bold; text-decoration: underline;">this</span>.normalizeNumber(insertedValue, 2);
+        <span style="font-weight: bold;">if</span> (insertedValue != <span style="font-style: italic;">""</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.implementAction(<span style="font-weight: bold; text-decoration: underline;">this</span>.insertElement.bind(<span style="font-weight: bold; text-decoration: underline;">this</span>), insertedValue);
+        }
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.animationManager.skipForward();
+}
+
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.initializeDefaultTree = <span style="font-weight: bold;">function</span>(){
+
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[0]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[1]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[2]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[3]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[4]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[5]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[6]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[7]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[8]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[9]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[10]);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertAuto(BST.DATA[11]);
+
+        demoTrack.nodeTrack = <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot;
+
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.nextProblemButton.disabled = <span style="font-weight: bold; text-decoration: underline;">true</span>
+}
+
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2efae8c" class="outline-3">
+<h3 id="org2efae8c"><span class="section-number-3">1.6</span> Insert function</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Recursive insert function called inside the insert Callback
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js" id="orgedd361e">
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insertElement = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">insertedValue</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.commands = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">Array</span>();    
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, 0, <span style="font-style: italic;">"Inserting "</span>+insertedValue);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightID = <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex++;
+        
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateCircle"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex, insertedValue,  <span style="font-weight: bold; text-decoration: underline;">this</span>.startingX, BST.STARTING_Y);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetForegroundColor"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex, BST.FOREGROUND_COLOR);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetBackgroundColor"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex, BST.BACKGROUND_COLOR);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);                               
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">BSTNode</span>(insertedValue, <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex, <span style="font-weight: bold; text-decoration: underline;">this</span>.startingX, BST.STARTING_Y)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex += 1;
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateCircle"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex, insertedValue, 100, 100);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetForegroundColor"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex, BST.FOREGROUND_COLOR);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetBackgroundColor"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex, BST.BACKGROUND_COLOR);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);                               
+                <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">insertElem</span> = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">BSTNode</span>(insertedValue, <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex, 100, 100)
+                
+                
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.nextIndex += 1;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, insertElem.graphicID, 1);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.insert(insertElem, <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeTree();                              
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, 0, <span style="font-style: italic;">""</span>);                             
+        <span style="font-weight: bold;">return</span> <span style="font-weight: bold; text-decoration: underline;">this</span>.commands;
+}
+
+
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.insert = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">elem</span>, <span style="font-weight: bold; font-style: italic;">tree</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID , 1);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, elem.graphicID , 1);
+        
+        <span style="font-weight: bold;">if</span> (elem.data &lt; tree.data)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, 0,  elem.data + <span style="font-style: italic;">" &lt; "</span> + tree.data + <span style="font-style: italic;">".  Looking at left subtree"</span>);                          
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>,  0, elem.data + <span style="font-style: italic;">" &gt;= "</span> + tree.data + <span style="font-style: italic;">".  Looking at right subtree"</span>);                                
+        }
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, tree.graphicID, 0);
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, elem.graphicID, 0);
+        
+        <span style="font-weight: bold;">if</span> (elem.data &lt; tree.data)
+        {
+                <span style="font-weight: bold;">if</span> (tree.left == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>, 0,<span style="font-style: italic;">"Found null tree, inserting element"</span>);                            
+                        
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, elem.graphicID, 0);
+                        tree.left=elem;
+                        elem.parent = tree;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, tree.graphicID, elem.graphicID, BST.LINK_COLOR);
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateHighlightCircle"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Move"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightID, tree.left.x, tree.left.y);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Delete"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightID);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.insert(elem, tree.left);
+                }
+        }
+        <span style="font-weight: bold;">else</span>
+        {
+                <span style="font-weight: bold;">if</span> (tree.right == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetText"</span>,  0, <span style="font-style: italic;">"Found null tree, inserting element"</span>);                          
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"SetHighlight"</span>, elem.graphicID, 0);
+                        tree.right=elem;
+                        elem.parent = tree;
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Connect"</span>, tree.graphicID, elem.graphicID, BST.LINK_COLOR);
+                        elem.x = tree.x + BST.WIDTH_DELTA/2;
+                        elem.y = tree.y + BST.HEIGHT_DELTA
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Move"</span>, elem.graphicID, elem.x, elem.y);
+                }
+                <span style="font-weight: bold;">else</span>
+                {
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"CreateHighlightCircle"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightID, BST.HIGHLIGHT_CIRCLE_COLOR, tree.x, tree.y);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Move"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightID, tree.right.x, tree.right.y);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Delete"</span>, <span style="font-weight: bold; text-decoration: underline;">this</span>.highlightID);
+                        <span style="font-weight: bold; text-decoration: underline;">this</span>.insert(elem, tree.right);
+                }
+        }
+        
+        
+}
+
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfc87f3e" class="outline-3">
+<h3 id="orgfc87f3e"><span class="section-number-3">1.7</span> Resize Tree</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Adjusts the node positions as more and more nodes are added.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js" id="org58474aa">
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.resizeTree = <span style="font-weight: bold;">function</span>()
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">startingPoint</span>  = <span style="font-weight: bold; text-decoration: underline;">this</span>.startingX;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.resizeWidths(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot);
+        <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.leftWidth &gt; startingPoint)
+                {
+                        startingPoint = <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.leftWidth;
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.rightWidth &gt; startingPoint)
+                {
+                        startingPoint = Math.max(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.leftWidth, 2 * startingPoint - <span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot.rightWidth);
+                }
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.setNewPositions(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot, startingPoint, BST.STARTING_Y, 0);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.animateNewPositions(<span style="font-weight: bold; text-decoration: underline;">this</span>.treeRoot);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Step"</span>);
+        }
+        
+}
+
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.setNewPositions = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>, <span style="font-weight: bold; font-style: italic;">xPosition</span>, <span style="font-weight: bold; font-style: italic;">yPosition</span>, <span style="font-weight: bold; font-style: italic;">side</span>)
+{
+        <span style="font-weight: bold;">if</span> (tree != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                tree.y = yPosition;
+                <span style="font-weight: bold;">if</span> (side == -1)
+                {
+                        xPosition = xPosition - tree.rightWidth;
+                }
+                <span style="font-weight: bold;">else</span> <span style="font-weight: bold;">if</span> (side == 1)
+                {
+                        xPosition = xPosition + tree.leftWidth;
+                }
+                tree.x = xPosition;
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.setNewPositions(tree.left, xPosition, yPosition + BST.HEIGHT_DELTA, -1)
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.setNewPositions(tree.right, xPosition, yPosition + BST.HEIGHT_DELTA, 1)
+        }
+        
+}
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.animateNewPositions = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>)
+{
+        <span style="font-weight: bold;">if</span> (tree != <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.cmd(<span style="font-style: italic;">"Move"</span>, tree.graphicID, tree.x, tree.y);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.animateNewPositions(tree.left);
+                <span style="font-weight: bold; text-decoration: underline;">this</span>.animateNewPositions(tree.right);
+        }
+}
+
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.resizeWidths = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">tree</span>) 
+{
+        <span style="font-weight: bold;">if</span> (tree == <span style="font-weight: bold; text-decoration: underline;">null</span>)
+        {
+                <span style="font-weight: bold;">return</span> 0;
+        }
+        tree.leftWidth = Math.max(<span style="font-weight: bold; text-decoration: underline;">this</span>.resizeWidths(tree.left), BST.WIDTH_DELTA / 2);
+        tree.rightWidth = Math.max(<span style="font-weight: bold; text-decoration: underline;">this</span>.resizeWidths(tree.right), BST.WIDTH_DELTA / 2);
+        <span style="font-weight: bold;">return</span> tree.leftWidth + tree.rightWidth;
+}
+
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org202012e" class="outline-3">
+<h3 id="org202012e"><span class="section-number-3">1.8</span> Node class</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+Class which holds data about each node in the BST
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js" id="orgd99f0a4">
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">BSTNode</span>(<span style="font-weight: bold; font-style: italic;">val</span>, <span style="font-weight: bold; font-style: italic;">id</span>, <span style="font-weight: bold; font-style: italic;">initialX</span>, <span style="font-weight: bold; font-style: italic;">initialY</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.data = val;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.x = initialX;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.y = initialY;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.graphicID = id;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.left = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.right = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.parent = <span style="font-weight: bold; text-decoration: underline;">null</span>;
+}
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3f56c14" class="outline-3">
+<h3 id="org3f56c14"><span class="section-number-3">1.9</span> UI enable and disable button</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+Enables and disables the UI whenever an animation is being played or a command is being acted upon.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-js" id="org4f01426">BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.disableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertField.disabled = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.disabled = <span style="font-weight: bold; text-decoration: underline;">true</span>;
+}
+
+BST.<span style="font-weight: bold; text-decoration: underline;">prototype</span>.enableUI = <span style="font-weight: bold;">function</span>(<span style="font-weight: bold; font-style: italic;">event</span>)
+{
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertField.disabled = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+        <span style="font-weight: bold; text-decoration: underline;">this</span>.insertButton.disabled = <span style="font-weight: bold; text-decoration: underline;">false</span>;
+
+}
+
+
+<span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">currentAlg</span>;
+
+<span style="font-weight: bold;">function</span> <span style="font-weight: bold;">init</span>()
+{
+        <span style="font-weight: bold;">var</span> <span style="font-weight: bold; font-style: italic;">animManag</span> = initCanvas();
+        currentAlg = <span style="font-weight: bold;">new</span> <span style="font-weight: bold; text-decoration: underline;">BST</span>(animManag, canvas.width, canvas.height);
+        currentAlg.initializeDefaultTree();
+        demoTrack.setup();
+        currentAlg.nextProblem();
+}
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge92789e" class="outline-2">
+<h2 id="orge92789e"><span class="section-number-2">2</span> Tangle</h2>
+<div class="outline-text-2" id="text-2">
+<div class="org-src-container">
+<pre class="src src-js">&lt;&lt;bstSearch&gt;&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: VLEAD</p>
+<p class="date">Created: 2021-03-15 Mon 20:00</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

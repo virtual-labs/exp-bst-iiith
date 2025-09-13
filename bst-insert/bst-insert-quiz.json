@@ -1,0 +1,63 @@
+{
+    "version": 2.0,
+    "questions": [
+        {
+            "question": "1. If you are given only the inorder traversal of a binary tree, you can construct the tree uniquely from it.",
+            "answers": {
+                "a": "True",
+                "b": "False"
+            },
+            "correctAnswer": "b",
+            "explanations": {},
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "2. Which of the following sets uniquely determine a binary tree",
+            "answers": {
+                "a": "In Order Traversal",
+                "b": "Post Order Traversal",
+                "c": "In Order and Pre Order Traversal",
+                "d": "Pre Order"
+            },
+            "correctAnswer": "c",
+            "explanations": {},
+            "difficulty": "intermediate"
+        },
+        {
+            "question": "3. Simulate the insertion of the following numbers in your binary search tree in order. Compute the resulting height of the tree: [1, 2, 3, 4, 5, 6, 7, 8]",
+            "answers": {
+                "a": "8",
+                "b": "6",
+                "c": "5",
+                "d": "4"
+            },
+            "correctAnswer": "a",
+            "explanations": {},
+            "difficulty": "beginner"
+        },
+        {
+            "question": "4. Simulate the insertion of the following numbers in your binary search tree in order. Compute the resulting height of the tree: [4, 2, 6, 3, 1, 5, 8, 7]",
+            "answers": {
+                "a": "8",
+                "b": "6",
+                "c": "5",
+                "d": "4"
+            },
+            "correctAnswer": "d",
+            "explanations": {},
+            "difficulty": "beginner"
+        },
+        {
+            "question": "5. Simulate the insertion of the following numbers in your binary search tree in order. Compute the resulting height of the tree: [4, 2, 6, 3, 1, 5, 7, 8]",
+            "answers": {
+                "a": "8",
+                "b": "6",
+                "c": "4",
+                "d": "3"
+            },
+            "correctAnswer": "c",
+            "explanations": {},
+            "difficulty": "intermediate"
+        }
+    ]
+}
