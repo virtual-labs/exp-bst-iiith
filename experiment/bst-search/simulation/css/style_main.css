@@ -1,5 +1,128 @@
+/* Portrait mode: stack buttons, center message */
+@media (max-width: 600px) and (min-height: 600px) {
+  .mobile-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    max-width: 95vw;
+  }
+  .mobile-stack > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  .mobile-stack .comment-box {
+    width: 90vw;
+    margin: 12px auto 0 auto;
+    float: none;
+    position: static;
+    font-size: 1em;
+    text-align: center;
+  }
+  .mobile-stack #AllInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .mobile-stack .button-input,
+  .mobile-stack .text-box {
+    width: 90vw !important;
+    height: 40px !important;
+    font-size: 1.1em !important;
+    margin: 0 auto 8px auto;
+    border-radius: 24px;
+  }
+}
+
+/* Landscape mode: center controls, buttons in a row, center all children of .mobile-stack */
+@media (min-width: 480px) and (max-width: 900px) and (max-height: 600px) {
+  .mobile-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 10px auto;
+    width: 100%;
+    max-width: 95vw;
+  }
+  .mobile-stack > * {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
+  .mobile-stack .comment-box {
+    width: 90vw;
+    margin: 12px auto 0 auto;
+    float: none;
+    position: static;
+    font-size: 1em;
+    text-align: center;
+  }
+  .mobile-stack #AllInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .mobile-stack .button-input,
+  .mobile-stack .text-box {
+    width: auto !important;
+    min-width: 80px;
+    max-width: 120px;
+    height: 40px !important;
+    font-size: 1.1em !important;
+    margin: 0 4px 0 4px;
+    border-radius: 24px;
+  }
+}
+/* Landscape mode: center controls, buttons in a row */
+@media (min-width: 480px) and (max-width: 900px) and (max-height: 600px) {
+  .mobile-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100vw;
+    margin: 0 auto 10px auto;
+  }
+  #AllInput {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100vw;
+  }
+  .button-input,
+  .text-box {
+    width: auto !important;
+    min-width: 80px;
+    max-width: 120px;
+    height: 40px !important;
+    font-size: 1.1em !important;
+    margin: 0 4px 0 4px;
+    border-radius: 24px;
+  }
+  .comment-box {
+    width: 90vw;
+    margin: 12px auto 0 auto;
+    float: none;
+    position: static;
+    font-size: 1em;
+    text-align: center;
+  }
+}
 body {
-  font-family : "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .button-input {
@@ -11,21 +134,18 @@ body {
   color: white;
   text-align: center;
   vertical-align: middle;
-  /* font-size: 1.4vw; */
   font-family: arial;
 }
 .button-input:hover {
-  background-color:gray;
-  cursor:pointer;
+  background-color: gray;
+  cursor: pointer;
 }
-
 
 .text-box {
   width: 15vw;
   height: 3vw;
   background-color: rgb(235, 235, 235);
   border-radius: 500px;
-  /* font-size: 1.4vw; */
   text-align: center;
 }
 .text-box:hover {
@@ -44,8 +164,7 @@ body {
   transition: width 0.2s ease-out;
   border: 0.1vw solid grey;
   font-family: arial;
-  /* font-size: 1.5vw; */
-  z-index : 10;
+  z-index: 10;
 }
 
 .collapsible {
@@ -56,7 +175,6 @@ body {
   border: none;
   text-align: center;
   outline: none;
-  /* font-size: 1.5vw; */
   font-weight: bold;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -66,12 +184,13 @@ body {
   border: 0;
 }
 
-.active, .collapsible:hover {
+.active,
+.collapsible:hover {
   background-color: "white";
 }
 
 .collapsible:after {
-  content: '\25BE';
+  content: "\25BE";
   color: "grey";
   font-weight: bold;
   float: right;
@@ -92,22 +211,18 @@ body {
 .comment-box {
   position: relative;
   height: 10vh;
-  left: 34%;
   top: 17%;
-  float: middle;
   padding: 1vw;
   width: 30vw;
-  margin-top: 1%;
+  margin: 1% auto 0 auto;
   font-family: arial;
-  /* font-size: 1.5vw; */
   text-align: center;
 }
 
-
 #mainContent {
-  text-align : center ;
+  text-align: center;
 }
 
 #canvas {
-  display : inline-block ;
+  display: inline-block;
 }

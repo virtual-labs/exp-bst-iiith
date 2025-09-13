@@ -156,7 +156,7 @@ BST.prototype.initializeDefaultTree = function(){
 
 BST.prototype.findCallback = function(event)
 {
-	if(isNaN(this.insertField.value)){
+	if(isNaN(this.findField.value)){
 		displayComment("Invalid Input. Kindly enter a 2 digit whole number");
 		return;
 	}
