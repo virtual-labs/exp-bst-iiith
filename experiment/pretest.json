@@ -1,54 +1,75 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. If a binary tree has height h, what is the maximum number of nodes it can have:",
-            "answers": {
-                "a": "h",
-                "b": "2 * h",
-                "c": "2 ^ h",
-                "d": "2 + h"
-            },
-            "correctAnswer": "c",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "2. A binary tree has 16 nodes, what is the maximum height it can have",
-            "answers": {
-                "a": "2",
-                "b": "4",
-                "c": "8",
-                "d": "16",
-                "e": "32"
-            },
-            "correctAnswer": "c",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "3. In a binary tree, how many pointers must each node essentially have (just to maintain the tree)",
-            "answers": {
-                "a": "1",
-                "b": "2",
-                "c": "3",
-                "d": "4"
-            },
-            "correctAnswer": "b",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "4. Which of the following can be the data types of the variable a, if the following statement compiles and is correct: next = a->lchild;",
-            "answers": {
-                "a": "int",
-                "b": "int*",
-                "c": "struct node",
-                "d": "struct node *"
-            },
-            "correctAnswer": "d",
-            "explanations": {},
-            "difficulty": "beginner"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. If a binary tree has height h, what is the maximum number of nodes it can have:",
+      "answers": {
+        "a": "h",
+        "b": "2 * h",
+        "c": "2 ^ h",
+        "d": "2 + h"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect: Height h alone doesn't determine the maximum number of nodes.",
+        "b": "Incorrect: 2*h is not the correct formula for maximum nodes in a binary tree.",
+        "c": "Correct: A complete binary tree of height h has 2^h - 1 nodes, so maximum is 2^h - 1 (approximately 2^h).",
+        "d": "Incorrect: 2+h is not related to the maximum number of nodes in a binary tree."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. A binary tree has 16 nodes, what is the maximum height it can have",
+      "answers": {
+        "a": "2",
+        "b": "4",
+        "c": "8",
+        "d": "16",
+        "e": "32"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect: Height 2 would allow at most 7 nodes in a binary tree.",
+        "b": "Incorrect: Height 4 would allow at most 15 nodes in a binary tree.",
+        "c": "Incorrect: Height 8 is not the maximum height for 16 nodes.",
+        "d": "Correct: Maximum height occurs in a completely skewed tree where height = nodes - 1 = 15, and 16 is the closest available option.",
+        "e": "Incorrect: Height 32 is impossible with only 16 nodes."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In a binary tree, how many pointers must each node essentially have (just to maintain the tree)",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect: One pointer is insufficient for a binary tree node.",
+        "b": "Correct: Each node needs two pointers - one for left child and one for right child.",
+        "c": "Incorrect: Three pointers are more than necessary for a basic binary tree node.",
+        "d": "Incorrect: Four pointers are more than necessary for a basic binary tree node."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following can be the data types of the variable a, if the following statement compiles and is correct: next = a->lchild;",
+      "answers": {
+        "a": "int",
+        "b": "int*",
+        "c": "struct node",
+        "d": "struct node *"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect: int variables cannot use the arrow operator (->).",
+        "b": "Incorrect: int* can use -> but doesn't have an lchild member.",
+        "c": "Incorrect: struct node should use dot operator (.) not arrow operator (->).",
+        "d": "Correct: struct node * is a pointer to a structure that can have an lchild member and uses -> operator."
+      },
+      "difficulty": "beginner"
+    }
+  ]
 }
