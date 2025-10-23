@@ -1,45 +1,45 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. If a node has 2 children, how can we delete the value in that node:",
-            "answers": {
-                "a": "By swapping it\u2019s value with the rightmost node in it\u2019s left subtree, then deleting that rightmost node.",
-                "b": "By swapping it\u2019s value with the leftmost node in it\u2019s right subtree.",
-                "c": "By swapping it\u2019s value with the rightmost node in it\u2019s left subtree, then deleting the node which originally contained the target value.",
-                "d": "By swapping it\u2019s value with the leftmost node in it\u2019s right subtree, then deleting the node which originally contained the target value."
-            },
-            "correctAnswer": "a",
-            "explanations": {
-                "a": "You have to delete the node you swapped with, which now contains the value of the node you were trying to delete."
-            },
-            "difficulty": "beginner"
-        },
-        {
-            "question": "2. If a node has 1 child to the right, but not left child, how can we delete it:",
-            "answers": {
-                "a": "By swapping it\u2019s value with the leftmost node in it\u2019s right subtree, then deleting that leftmost node.",
-                "b": "By assigning it\u2019s child\u2019s parent as it\u2019s parent, by assigning it\u2019s parents right child as it\u2019s right child, and then deleting itself.",
-                "c": "By just deleting the target node and making the pointers null if they were pointing to the node being deleted.",
-                "d": "By swapping the value of this node with the root of the tree and then deleting the root node."
-            },
-            "correctAnswer": "b",
-            "explanations": {},
-            "difficulty": "beginner"
-        },
-        {
-            "question": "3. In a real BST, delete takes O(log n) time. Assume that you discover an oracle which can search, compute min or max of a subtree, in a binary search tree in O(1) time. What will the time complexity of the optimal deletion algorithm using this oracle:",
-            "answers": {
-                "a": "O(1)",
-                "b": "O(log n)",
-                "c": "O(log(log(n))",
-                "d": "O(n)"
-            },
-            "correctAnswer": "a",
-            "explanations": {
-                "a": "The only time being taken was to search the right nodes, the pointer changes are O(1)."
-            },
-            "difficulty": "intermediate"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. If a node has 2 children, how can we delete the value in that node:",
+      "answers": {
+        "a": "By swapping it\u2019s value with the rightmost node in it\u2019s left subtree, then deleting that rightmost node.",
+        "b": "By swapping it\u2019s value with the leftmost node in it\u2019s right subtree.",
+        "c": "By swapping it\u2019s value with the rightmost node in it\u2019s left subtree, then deleting the node which originally contained the target value.",
+        "d": "By swapping it\u2019s value with the leftmost node in it\u2019s right subtree, then deleting the node which originally contained the target value."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "You have to delete the node you swapped with, which now contains the value of the node you were trying to delete."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. If a node has 1 child to the right, but not left child, how can we delete it:",
+      "answers": {
+        "a": "By swapping it\u2019s value with the leftmost node in it\u2019s right subtree, then deleting that leftmost node.",
+        "b": "By assigning it\u2019s child\u2019s parent as it\u2019s parent, by assigning it\u2019s parents right child as it\u2019s right child, and then deleting itself.",
+        "c": "By just deleting the target node and making the pointers null if they were pointing to the node being deleted.",
+        "d": "By swapping the value of this node with the root of the tree and then deleting the root node."
+      },
+      "correctAnswer": "b",
+      "explanations": {},
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In a real BST, delete takes O(log n) time. Assume that you discover an oracle which can search, compute min or max of a subtree, in a binary search tree in O(1) time. What will the time complexity of the optimal deletion algorithm using this oracle:",
+      "answers": {
+        "a": "O(1)",
+        "b": "O(log n)",
+        "c": "O(log(log(n))",
+        "d": "O(n)"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "The only time being taken was to search the right nodes, the pointer changes are O(1)."
+      },
+      "difficulty": "intermediate"
+    }
+  ]
 }
