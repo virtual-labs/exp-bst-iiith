@@ -50,8 +50,8 @@ BST.FOREGROUND_COLOR = "#000000";
 BST.BACKGROUND_COLOR = "#FFFFFF";
 BST.PRINT_COLOR = BST.FOREGROUND_COLOR;
 
-BST.WIDTH_DELTA = 50;
-BST.HEIGHT_DELTA = 50;
+BST.WIDTH_DELTA = 38;
+BST.HEIGHT_DELTA = 38;
 BST.STARTING_Y = 50;
 
 BST.FIRST_PRINT_POS_X = 50;
@@ -567,7 +567,35 @@ BST.prototype.enableUI = function (event) {
 var currentAlg;
 
 function init() {
+  // Set canvas dimensions based on screen size BEFORE initCanvas
+  var canvas = document.getElementById("canvas");
+
+  if (window.innerWidth <= 768) {
+    // Mobile view - use screen width
+    var mobileWidth = Math.floor(window.innerWidth * 0.95);
+    var mobileHeight = 600;
+    canvas.width = mobileWidth;
+    canvas.height = mobileHeight;
+    canvas.setAttribute("width", mobileWidth.toString());
+    canvas.setAttribute("height", mobileHeight.toString());
+  } else {
+    // Desktop view - keep original size
+    canvas.width = 1000;
+    canvas.height = 500;
+    canvas.setAttribute("width", "1000");
+    canvas.setAttribute("height", "500");
+  }
+
   var animManag = initCanvas();
+
+  // Re-set canvas dimensions after initCanvas (it may have reset them)
+  if (window.innerWidth <= 768) {
+    var mobileWidth = Math.floor(window.innerWidth * 0.95);
+    var mobileHeight = 600;
+    canvas.width = mobileWidth;
+    canvas.height = mobileHeight;
+  }
+
   currentAlg = new BST(animManag, canvas.width, canvas.height);
   currentAlg.initializeDefaultTree();
   displayComment("Find 21.");

@@ -143,14 +143,15 @@
         </div>
       </div>
       <div id="mainContent" style="margin-top: 30px">
-        <!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
-        <canvas id="canvas" width="1000" height="500"></canvas>
+        <!-- Wrapper for horizontal scroll -->
+        <canvas id="canvas"></canvas>
         <div id="generalAnimationControlSection" class="sr-only">
           <table id="GeneralAnimationControls"></table>
         </div>
       </div>
     </div>
 
+    <!-- No dynamic resizing needed, fixed canvas size and scrollable wrapper as in delete pages -->
     <script
       type="text/javascript"
       src="static/lib/jquery-1.5.2.min.js"
