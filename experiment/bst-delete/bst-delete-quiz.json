@@ -11,7 +11,10 @@
       },
       "correctAnswer": "b",
       "explanations": {
-        "a": "You have to delete the node you swapped with, which now contains the value of the node you were trying to delete."
+        "a": "Incorrect. While swapping with the rightmost node in the left subtree is valid, you must delete the node you swapped with (which now contains the target value), not the rightmost node itself.",
+        "b": "Correct. When deleting a node with two children, you can swap its value with the leftmost node (inorder successor) in its right subtree, then delete that leftmost node. This maintains BST properties since the inorder successor has at most one child.",
+        "c": "Incorrect. You should delete the node you swapped with (the rightmost node), not the original node position. After swapping, the rightmost node contains the target value and needs to be removed.",
+        "d": "Incorrect. While the approach of swapping with the leftmost node in the right subtree is correct, you should delete the leftmost node (which now contains the target value), not the node at the original position."
       },
       "difficulty": "beginner"
     },
@@ -24,7 +27,12 @@
         "d": "By swapping the value of this node with the root of the tree and then deleting the root node."
       },
       "correctAnswer": "b",
-      "explanations": {},
+      "explanations": {
+        "a": "Incorrect. This approach is unnecessarily complex for a node with only one child. You don't need to swap values when the node has only one child - you can simply bypass the node by connecting its parent directly to its child.",
+        "b": "Correct. When a node has only one child (right child), you can delete it by making the parent point directly to the child, effectively bypassing the node to be deleted. This maintains the BST structure and is the most efficient approach.",
+        "c": "Incorrect. Simply deleting the node and setting pointers to null would break the tree structure and lose the entire right subtree. You must reconnect the child to the parent to maintain tree connectivity.",
+        "d": "Incorrect. Swapping with the root is unnecessary and incorrect. This would violate BST properties and is not a valid deletion strategy for a node with one child."
+      },
       "difficulty": "beginner"
     },
     {
@@ -37,7 +45,10 @@
       },
       "correctAnswer": "a",
       "explanations": {
-        "a": "The only time being taken was to search the right nodes, the pointer changes are O(1)."
+        "a": "Correct. With an oracle that can search and find min/max in O(1) time, deletion becomes O(1). The only operations needed are finding the node (O(1) with oracle), finding its successor/predecessor if needed (O(1) with oracle), and adjusting pointers (O(1)). All steps are constant time.",
+        "b": "Incorrect. O(log n) is the time complexity without the oracle. With the oracle providing O(1) search and min/max operations, we can eliminate the logarithmic traversal time and achieve constant time deletion.",
+        "c": "Incorrect. O(log(log(n))) would suggest some iterative halving process, but deletion with the oracle doesn't involve such operations. The oracle directly provides what we need in O(1) time.",
+        "d": "Incorrect. O(n) would mean visiting all nodes, which is not necessary for BST deletion even without the oracle. With the oracle providing instant search and min/max, deletion is even faster at O(1)."
       },
       "difficulty": "intermediate"
     }
