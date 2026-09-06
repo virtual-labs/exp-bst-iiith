@@ -1,61 +1,158 @@
 {
-    "version": 2.0,
-    "questions": [
-        {
-            "question": "1. Time complexity of searching in a binary search tree is",
-            "answers": {
-                "a": "O(n^2)",
-                "b": "O(n log n)",
-                "c": "O(n)",
-                "d": "O(log n)"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "All operations are order height, so they are all O(n) since the tree can be highly unbalanced."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "2. Time complexity of deleting from a binary search tree is",
-            "answers": {
-                "a": "O(n^2)",
-                "b": "O(n log n)",
-                "c": "O(n)",
-                "d": "O(log n)"
-            },
-            "correctAnswer": "c",
-            "explanations": {
-                "c": "All operations are order height, so they are all O(n) since the tree can be highly unbalanced."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "3. Time complexity of deleting from a balanced binary search tree is",
-            "answers": {
-                "a": "O(n^2)",
-                "b": "O(n log n)",
-                "c": "O(n)",
-                "d": "O(log n)"
-            },
-            "correctAnswer": "d",
-            "explanations": {
-                "d": "All operations are order height, so they are all O(log n) since the tree is given to be balanced."
-            },
-            "difficulty": "intermediate"
-        },
-        {
-            "question": "4. If all the queries in a BST come after all the insertions and deletions, then which of the following algorithms is faster than a BST at the same task:",
-            "answers": {
-                "a": "Sorting and two pointers",
-                "b": "Sorting and binary search",
-                "c": "Binary Search and two pointers",
-                "d": "Merge Sort Tree"
-            },
-            "correctAnswer": "b",
-            "explanations": {
-                "b": "The static version of binary search tree is just binary search."
-            },
-            "difficulty": "beginner"
-        }
-    ]
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. What is the worst-case time complexity of searching for a key in a binary search tree containing $n$ nodes?",
+      "answers": {
+        "a": "$O(n^2)$",
+        "b": "$O(n\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(\\log n)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. A single BST search follows one root-to-leaf path and does not require quadratic work.",
+        "b": "Incorrect. A single search does not generally perform $n\\log n$ operations.",
+        "c": "Correct. In the worst case, the BST can be completely skewed, making the height $O(n)$ and causing the search to examine up to $n$ nodes.",
+        "d": "Incorrect. $O(\\log n)$ applies when the BST has logarithmic height, such as in a sufficiently balanced tree."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. What is the worst-case time complexity of deleting a key from a binary search tree containing $n$ nodes?",
+      "answers": {
+        "a": "$O(n^2)$",
+        "b": "$O(n\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(\\log n)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. A standard BST deletion does not require quadratic work.",
+        "b": "Incorrect. A single deletion operation does not generally require $n\\log n$ work.",
+        "c": "Correct. The deletion operation may need to traverse a path whose length is the tree height. In the worst case, the height is $O(n)$.",
+        "d": "Incorrect. $O(\\log n)$ describes deletion when the tree height is logarithmic, such as in a balanced BST."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. What is the time complexity of deleting a key from a balanced binary search tree containing $n$ nodes?",
+      "answers": {
+        "a": "$O(n^2)$",
+        "b": "$O(n\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(\\log n)$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A balanced BST deletion does not require quadratic work.",
+        "b": "Incorrect. A single deletion operation does not require $n\\log n$ work.",
+        "c": "Incorrect. A balanced BST has logarithmic height, so deletion does not require visiting all $n$ nodes.",
+        "d": "Correct. In a balanced BST, the height is $O(\\log n)$, so searching for the node and performing the required deletion steps takes $O(\\log n)$ time."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. If all the queries in a BST-based application occur after all insertions and deletions are complete, which approach can be faster for answering the subsequent search queries?",
+      "answers": {
+        "a": "Sorting the keys and using binary search",
+        "b": "Sorting the keys and using only linear search",
+        "c": "Using binary search followed by another BST construction",
+        "d": "Using a stack for every search"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Once the set of keys becomes static, storing the keys in sorted order allows binary search to answer each query in $O(\\log n)$ time without maintaining a dynamic BST.",
+        "b": "Incorrect. Linear search can require examining many stored keys for a single query.",
+        "c": "Incorrect. Reconstructing a BST for every query adds unnecessary work when the set of keys is already static.",
+        "d": "Incorrect. A stack by itself does not provide the ordered-search property needed for efficient BST-like searching."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. What is the best-case time complexity of searching for a key in a BST when the key is stored at the root?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. If the first comparison at the root matches the target key, the search finishes immediately.",
+        "b": "Incorrect. The search does not need to traverse a logarithmic number of levels when the target is at the root.",
+        "c": "Incorrect. The search does not visit all nodes when the target is found immediately.",
+        "d": "Incorrect. A single successful search at the root does not require quadratic work."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. What is the space complexity of a recursive BST search in the worst case, considering the recursion stack?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Recursive calls remain on the call stack while the search proceeds down the tree.",
+        "b": "Incorrect. $O(\\log n)$ stack space applies when the tree height is logarithmic, not to the worst case.",
+        "c": "Correct. A completely skewed BST can have height $O(n)$, causing up to $O(n)$ recursive calls.",
+        "d": "Incorrect. The recursion depth is bounded by the tree height, which is at most linear in the number of nodes."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "7. If a BST has height $h$, what is the time complexity of searching for a key in terms of $h$?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(h)$",
+        "c": "$O(h^2)$",
+        "d": "$O(2^h)$"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The search may need to move through multiple levels before reaching the target or an empty position.",
+        "b": "Correct. A BST search follows a single root-to-leaf path, so its running time is proportional to the tree height, $O(h)$.",
+        "c": "Incorrect. The search does not explore all pairs of nodes or perform a quadratic operation at each level.",
+        "d": "Incorrect. The search follows one path rather than visiting all nodes at every level."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. A balanced BST has height $O(\\log n)$. What is the resulting time complexity of searching, inserting, or deleting a key when the required operation follows a root-to-leaf path?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(n)$",
+        "c": "$O(n\\log n)$",
+        "d": "$O(\\log n)$"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The operation can require moving through several levels of the tree.",
+        "b": "Incorrect. A balanced tree has a much smaller height than $n$.",
+        "c": "Incorrect. These operations follow a single tree path rather than processing all nodes with an additional logarithmic factor.",
+        "d": "Correct. Since the tree height is $O(\\log n)$, operations whose work is proportional to height also take $O(\\log n)$ time."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Which factor primarily determines the time complexity of basic search, insertion, and deletion operations in a binary search tree?",
+      "answers": {
+        "a": "The number of leaves only",
+        "b": "The height of the tree",
+        "c": "The value stored at the root",
+        "d": "The number of pointers in each node"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The number of leaves alone does not determine the length of the path followed by these operations.",
+        "b": "Correct. Basic BST search, insertion, and deletion generally follow a path whose length is bounded by the tree height.",
+        "c": "Incorrect. The root value affects the path for a particular key but does not by itself determine the asymptotic complexity.",
+        "d": "Incorrect. The standard number of child pointers per node does not determine the length of the search path."
+      },
+      "difficulty": "beginner"
+    }
+  ]
 }
