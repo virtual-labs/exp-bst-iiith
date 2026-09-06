@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "experiment name": "Experiment Name",
+  "problems": [
+    {
+      "problem name": "Binary Search Tree Search",
+      "description": "Implement a search function for a binary search tree (BST) that returns the path taken to find a target node. In a BST, start at the root and compare the target with the current node: if target is less than current node, go left; if greater, go right; if equal, target is found. Return an array of node values visited during the search. Example: searching for 5 in a BST with root 3, left child 2 (with child 1), and right child 4 (with right child 5 that has right child 6) returns [3,4,5]. Only JavaScript is allowed.",
+      "inputs": [
+        {
+          "val": 3,
+          "left": {
+            "val": 2,
+            "left": {
+              "val": 1,
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "right": {
+            "val": 4,
+            "left": null,
+            "right": {
+              "val": 5,
+              "left": null,
+              "right": {
+                "val": 6,
+                "left": null,
+                "right": null
+              }
+            }
+          }
+        },
+        5
+      ],
+      "expected": [3, 4, 5],
+      "inputs description": "Input consists of a binary search tree represented as a nested dictionary and a target node.",
+      "expected description": "An array of nodes in the order they are visited during the DFS traversal following the properties of the BST.",
+      "difficulty": "beginner"
+    },
+    {
+      "problem name": "Validate Binary Search Tree",
+      "description": "Implement a function to validate whether a binary tree is a valid binary search tree (BST). A valid BST must satisfy: for every node, all values in the left subtree are less than the node's value, and all values in the right subtree are greater than the node's value. Recursively check each node against min/max bounds that tighten as you traverse down. Example: the array [10,5,15,1,7,12,20] representing level-order tree construction is a valid BST and returns true. Only JavaScript is allowed.",
+      "inputs": [[10, 5, 15, 1, 7, 12, 20]],
+      "expected": true,
+      "inputs description": "An array of integers representing the values to construct a binary search tree. Nodes are sequentially placed in an array, with each node at index i having its left child at 2i + 1 and its right child at 2i + 2.",
+      "expected description": "A boolean indicating whether the given tree is a valid binary search tree.",
+      "difficulty": "intermediate"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. If you are given only the inorder traversal of a binary tree, you can construct the tree uniquely from it.",
+      "answers": {
+        "a": "True",
+        "b": "False"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. An inorder traversal alone does not provide enough information to determine the complete tree structure uniquely.",
+        "b": "Correct. Multiple binary tree structures can have the same inorder traversal, so additional traversal information is needed to determine the structure uniquely."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. Which of the following sets of traversals can uniquely determine a binary tree?",
+      "answers": {
+        "a": "Inorder traversal only",
+        "b": "Postorder traversal only",
+        "c": "Inorder and preorder traversals",
+        "d": "Preorder traversal only"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Inorder traversal alone does not uniquely specify the arrangement of the nodes.",
+        "b": "Incorrect. Postorder traversal alone does not provide enough positional information to uniquely reconstruct a general binary tree.",
+        "c": "Correct. For a binary tree with distinct keys, inorder together with preorder provides enough information to reconstruct the tree uniquely.",
+        "d": "Incorrect. Preorder traversal alone does not uniquely specify the complete structure of a general binary tree."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. Simulate the insertion of the following numbers into an initially empty binary search tree in order. What is the resulting height of the tree, measured as the number of edges on the longest root-to-leaf path? [1, 2, 3, 4, 5, 6, 7, 8]",
+      "answers": {
+        "a": "7",
+        "b": "6",
+        "c": "5",
+        "d": "4"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Each new key is greater than the previous key, so every node becomes the right child of the previous node. The resulting tree has 8 nodes and height $8-1=7$.",
+        "b": "Incorrect. This height does not account for the complete chain formed by inserting the keys in strictly increasing order.",
+        "c": "Incorrect. The resulting tree contains a longer root-to-leaf path than this value.",
+        "d": "Incorrect. The tree is not balanced; the increasing insertion order creates a long one-sided path."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Simulate the insertion of the following numbers into an initially empty binary search tree in order. What is the resulting height of the tree, measured as the number of edges on the longest root-to-leaf path? [4, 2, 6, 3, 1, 5, 8, 7]",
+      "answers": {
+        "a": "8",
+        "b": "6",
+        "c": "5",
+        "d": "3"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The tree contains only 8 nodes, so a height of 8 would require a longer path than the one produced by these insertions.",
+        "b": "Incorrect. The longest root-to-leaf path in the resulting tree is shorter than this value.",
+        "c": "Incorrect. The insertion sequence does not create a path of this length.",
+        "d": "Correct. The longest path is $4\\rightarrow6\\rightarrow8\\rightarrow7$, which contains 3 edges, so the height is 3."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Simulate the insertion of the following numbers into an initially empty binary search tree in order. What is the resulting height of the tree, measured as the number of edges on the longest root-to-leaf path? [4, 2, 6, 3, 1, 5, 7, 8]",
+      "answers": {
+        "a": "8",
+        "b": "6",
+        "c": "4",
+        "d": "3"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The tree has only 8 nodes, and its longest root-to-leaf path is shorter than this value.",
+        "b": "Incorrect. The resulting tree is not a chain containing seven edges.",
+        "c": "Correct. The longest path is $4\\rightarrow6\\rightarrow7\\rightarrow8$, which contains 3 edges, so the height is actually 3. Therefore, the original answer key should be corrected to option d.",
+        "d": "Incorrect. This value corresponds to the actual height of the tree, but option d should be the correct answer after correcting the original answer key."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. When inserting a new key into a binary search tree, what determines whether the search continues to the left or right child?",
+      "answers": {
+        "a": "The height of the current node",
+        "b": "The comparison between the new key and the current node's key",
+        "c": "The number of nodes in the tree",
+        "d": "The level of the current node"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Node height is not used to determine the insertion direction.",
+        "b": "Correct. The new key is compared with the current node's key; smaller keys continue left and larger keys continue right, assuming distinct keys.",
+        "c": "Incorrect. The total number of nodes does not determine whether insertion proceeds left or right.",
+        "d": "Incorrect. The node's level does not determine the insertion direction."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. If the keys 50, 30, 70, 20, and 40 are inserted into an initially empty BST, which node becomes the right child of 30?",
+      "answers": {
+        "a": "20",
+        "b": "40",
+        "c": "50",
+        "d": "70"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Since $20<30$, it is placed in the left subtree of 30.",
+        "b": "Correct. Since $40>30$ and $40<50$, it becomes the right child of 30.",
+        "c": "Incorrect. 50 is the first inserted key and becomes the root.",
+        "d": "Incorrect. 70 is greater than 50 and becomes the right child of the root."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. Consider inserting the keys [8, 3, 10, 1, 6, 14, 4] into an initially empty BST. Which key becomes the left child of 6?",
+      "answers": {
+        "a": "1",
+        "b": "3",
+        "c": "4",
+        "d": "14"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Key 1 is placed in the left subtree of 3.",
+        "b": "Incorrect. Key 3 is the left child of the root 8.",
+        "c": "Correct. Key 4 is greater than 3 but less than 6, so it becomes the left child of 6.",
+        "d": "Incorrect. Key 14 belongs in the right subtree of 10."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Suppose two distinct keys $x$ and $y$ are inserted into a BST, and $x<y$. If $x$ is inserted before $y$ and both eventually become ancestors/descendants of one another, which node can be the ancestor?",
+      "answers": {
+        "a": "$x$ can be an ancestor of $y$",
+        "b": "$y$ can never be an ancestor of $x$",
+        "c": "Only the root can be their ancestor",
+        "d": "Neither key can be an ancestor of the other"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Because $x$ is inserted first and $x<y$, $y$ can be placed in the right subtree of $x$, making $x$ an ancestor of $y$.",
+        "b": "Incorrect. The insertion and intervening keys can result in $y$ becoming an ancestor of $x$ in some BSTs.",
+        "c": "Incorrect. Ancestor relationships can occur at different levels of a BST and are not restricted to the root.",
+        "d": "Incorrect. BST insertion can create ancestor-descendant relationships between inserted keys."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

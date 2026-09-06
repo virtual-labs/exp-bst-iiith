@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. If a node in a binary search tree has two children, how can its value be deleted using its inorder successor?",
+      "answers": {
+        "a": "Swap its value with the rightmost node in its left subtree, then delete the original node without reconnecting the tree.",
+        "b": "Swap its value with the leftmost node in its right subtree, then delete that successor node.",
+        "c": "Swap its value with the rightmost node in its left subtree, then delete the original node position without further changes.",
+        "d": "Swap its value with the leftmost node in its right subtree, then delete the root of the entire tree."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Although the rightmost node of the left subtree can be used as an inorder predecessor, the described deletion does not correctly complete the replacement process.",
+        "b": "Correct. The leftmost node of the right subtree is the inorder successor. Its value can replace the target value, after which the successor node can be deleted.",
+        "c": "Incorrect. Replacing the target value requires deleting the node containing the replacement value rather than simply removing the original node position.",
+        "d": "Incorrect. The root of the entire tree is unrelated to the inorder successor unless it happens to be the relevant node."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. If a node in a BST has only one child to the right and no left child, how can the node be deleted?",
+      "answers": {
+        "a": "Swap its value with the leftmost node in its right subtree, then delete that node.",
+        "b": "Connect the node's parent directly to its right child, then delete the node.",
+        "c": "Delete the node and set all pointers to null.",
+        "d": "Swap its value with the root of the tree and then delete the root."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Swapping with another node is unnecessary when the target has only one child.",
+        "b": "Correct. The parent's link can bypass the target node and point directly to its right child, preserving the subtree.",
+        "c": "Incorrect. Removing the node without reconnecting its child would disconnect the remaining subtree.",
+        "d": "Incorrect. The root is not involved in the standard deletion of a node with one child."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In a real BST, deletion takes $O(\\log n)$ time when the tree is balanced. Assume an oracle can search and compute the minimum or maximum of a subtree in $O(1)$ time. What is the time complexity of an optimal deletion algorithm using this oracle?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(\\log(\\log n))$",
+        "d": "$O(n)$"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The oracle provides the required search and successor/predecessor information in constant time, and the remaining pointer updates require only a constant number of operations.",
+        "b": "Incorrect. This complexity would still include logarithmic traversal work that the oracle has eliminated.",
+        "c": "Incorrect. The deletion procedure does not involve a repeated logarithmic reduction that would produce this complexity.",
+        "d": "Incorrect. Deletion does not require visiting every node of the tree."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. When deleting a leaf node from a BST, what should be done?",
+      "answers": {
+        "a": "Replace it with its inorder successor.",
+        "b": "Replace it with its inorder predecessor.",
+        "c": "Remove the node and update its parent's corresponding child pointer.",
+        "d": "Replace it with the root."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. A leaf has no children, so replacement by another node is unnecessary.",
+        "b": "Incorrect. A leaf does not require predecessor replacement because it has no child subtree to preserve.",
+        "c": "Correct. Since a leaf has no children, it can be removed and the parent's corresponding pointer can be set appropriately.",
+        "d": "Incorrect. The root does not need to be involved when deleting an ordinary leaf."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Which node can be used to replace a BST node that has two children while preserving the BST ordering property?",
+      "answers": {
+        "a": "Any leaf in the tree",
+        "b": "The inorder successor or inorder predecessor",
+        "c": "The root only",
+        "d": "Any node at the same level"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. An arbitrary leaf may not have a key value suitable for preserving the BST ordering.",
+        "b": "Correct. The inorder successor or inorder predecessor has a key value that can replace the deleted node while maintaining the BST ordering.",
+        "c": "Incorrect. The root is not generally the appropriate replacement node.",
+        "d": "Incorrect. Nodes at the same level do not necessarily have an appropriate key value for replacement."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which of the following cases is generally the simplest BST deletion case?",
+      "answers": {
+        "a": "Deleting a node with two children",
+        "b": "Deleting the root when it has two children",
+        "c": "Deleting a leaf node",
+        "d": "Deleting a node whose successor has a child"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. A node with two children requires additional replacement and restructuring steps.",
+        "b": "Incorrect. Deleting a root with two children requires handling the two-subtree case.",
+        "c": "Correct. A leaf has no children, so it can be removed by updating the appropriate parent pointer.",
+        "d": "Incorrect. A successor with a child requires additional pointer adjustment after replacement."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "7. When deleting a BST node using its inorder successor, where is that successor located?",
+      "answers": {
+        "a": "At the leftmost node of the target's right subtree",
+        "b": "At the rightmost node of the target's right subtree",
+        "c": "At the leftmost node of the target's left subtree",
+        "d": "At the root of the entire tree"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The inorder successor is the smallest key greater than the target, which is found at the leftmost node of the target's right subtree.",
+        "b": "Incorrect. The rightmost node of the right subtree represents a larger key than the successor.",
+        "c": "Incorrect. The left subtree contains keys smaller than the target and is associated with finding the predecessor.",
+        "d": "Incorrect. The root is not generally the inorder successor."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. After replacing a BST node with its inorder successor, why is deleting the successor usually simpler than deleting the original two-child node?",
+      "answers": {
+        "a": "The successor is always the root.",
+        "b": "The successor is guaranteed to have no parent.",
+        "c": "The successor has no larger keys in the tree.",
+        "d": "The inorder successor has no left child and therefore has at most one child."
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. The successor can occur at many different positions in the tree.",
+        "b": "Incorrect. The successor is normally a descendant of the node being deleted and therefore has a parent unless it is the root itself.",
+        "c": "Incorrect. The absence of larger keys is not the reason that successor deletion is simpler.",
+        "d": "Correct. Because the successor is the leftmost node in the right subtree, it has no left child and therefore can have at most one child."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. If a BST node has only a left child, what is the appropriate structural action when deleting that node?",
+      "answers": {
+        "a": "Connect the parent directly to the left child.",
+        "b": "Delete the entire left subtree.",
+        "c": "Replace the node with the root of the tree.",
+        "d": "Always rotate the tree before deletion."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The parent can bypass the deleted node and point directly to its left child, preserving the remaining subtree.",
+        "b": "Incorrect. The left subtree contains valid BST nodes and should not be discarded.",
+        "c": "Incorrect. Replacing the node with the root is unrelated to the one-child deletion case.",
+        "d": "Incorrect. A rotation is not inherently required when deleting a node with one child from an ordinary BST."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

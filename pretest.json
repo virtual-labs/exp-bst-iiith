@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. If a binary search tree has height $h$, where height is measured as the number of edges on the longest root-to-leaf path, what is the maximum number of nodes it can have?",
+      "answers": {
+        "a": "$h$",
+        "b": "$2h$",
+        "c": "$2^{h+1}-1$",
+        "d": "$2+h$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. This expression does not account for the number of nodes that can occur at multiple levels of a binary tree.",
+        "b": "Incorrect. This expression grows linearly with height and does not account for the branching structure of a binary tree.",
+        "c": "Correct. A binary tree of height $h$ can have at most $1+2+4+\\cdots+2^h=2^{h+1}-1$ nodes.",
+        "d": "Incorrect. Adding the height to a constant does not represent the maximum number of nodes in a binary tree."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. A binary search tree has 16 nodes. What is the maximum possible height of the tree, assuming height is measured as the number of edges on the longest root-to-leaf path?",
+      "answers": {
+        "a": "2",
+        "b": "4",
+        "c": "8",
+        "d": "15"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. A tree with height 2 cannot contain 16 nodes because it has only three levels.",
+        "b": "Incorrect. A tree with height 4 cannot have a path containing all 16 nodes.",
+        "c": "Incorrect. A tree with height 8 can contain 16 nodes, but a greater height is possible.",
+        "d": "Correct. The maximum height occurs when the tree is completely skewed, so each node has only one child. For 16 nodes, the height is $16-1=15$."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "3. In a binary search tree implemented using linked nodes, how many child pointers does each node typically have to maintain its left and right subtrees?",
+      "answers": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A single child pointer cannot independently represent both the left and right subtrees.",
+        "b": "Correct. A typical binary search tree node has two child pointers: one for the left child and one for the right child.",
+        "c": "Incorrect. Three child pointers are not required for the standard binary search tree node structure.",
+        "d": "Incorrect. Four child pointers are not required for a standard binary search tree node."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. Which of the following can be the data type of the variable $a$ if the statement `next = a->lchild;` compiles correctly?",
+      "answers": {
+        "a": "int",
+        "b": "int*",
+        "c": "struct node",
+        "d": "struct node *"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. An integer variable does not represent a structure containing an `lchild` member and cannot be used this way with the arrow operator.",
+        "b": "Incorrect. Although an integer pointer is a pointer type, it does not provide access to an `lchild` member of a node structure.",
+        "c": "Incorrect. A structure variable is accessed using the dot operator rather than the arrow operator.",
+        "d": "Correct. A `struct node *` is a pointer to a node structure and can access its `lchild` member using the arrow operator."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. Which traversal of a binary search tree visits the keys in nondecreasing sorted order?",
+      "answers": {
+        "a": "Preorder traversal",
+        "b": "Postorder traversal",
+        "c": "Level-order traversal",
+        "d": "Inorder traversal"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Preorder visits a node before its subtrees, so it does not generally produce sorted keys.",
+        "b": "Incorrect. Postorder visits both subtrees before the node and does not generally produce sorted keys.",
+        "c": "Incorrect. Level-order traversal visits nodes level by level and does not generally produce sorted keys.",
+        "d": "Correct. Inorder traversal visits the left subtree, the node, and then the right subtree, producing keys in sorted order in a BST."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Which property distinguishes a binary search tree from a general binary tree?",
+      "answers": {
+        "a": "Every node must have exactly two children.",
+        "b": "The left subtree contains smaller keys and the right subtree contains larger keys than the node, assuming distinct keys.",
+        "c": "All leaves must be at the same level.",
+        "d": "The tree must always be complete."
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. A BST node may have zero, one, or two children.",
+        "b": "Correct. For distinct keys, every key in the left subtree is smaller than the node's key, while every key in the right subtree is larger.",
+        "c": "Incorrect. A BST does not require all leaves to occur at the same level.",
+        "d": "Incorrect. A BST does not have to be complete; it may also be unbalanced."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. If the keys 50, 30, 70, 20, and 40 are inserted into an initially empty binary search tree in that order, which key becomes the left child of 30?",
+      "answers": {
+        "a": "20",
+        "b": "40",
+        "c": "50",
+        "d": "70"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Since $20<30<50$, the key 20 is inserted into the left subtree of 30 and becomes its left child.",
+        "b": "Incorrect. The key 40 is greater than 30, so it is placed on the right side of 30.",
+        "c": "Incorrect. The key 50 is inserted first and therefore becomes the root of the tree.",
+        "d": "Incorrect. The key 70 is greater than 50, so it belongs in the right subtree of 50."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. A binary search tree contains the keys 20, 10, 30, 5, 15, 25, and 35. Which key is encountered first when searching for 25?",
+      "answers": {
+        "a": "10",
+        "b": "15",
+        "c": "20",
+        "d": "30"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The search does not move to the left subtree before comparing the target with the root.",
+        "b": "Incorrect. The search for 25 does not enter the subtree rooted at 15.",
+        "c": "Correct. The search begins at the root, which contains 20, before moving to the appropriate subtree.",
+        "d": "Incorrect. The search reaches the right subtree after the comparison at the root."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. Two binary search trees contain the same set of distinct keys but were built using different insertion orders. Which statement is necessarily true?",
+      "answers": {
+        "a": "The two trees must have the same shape.",
+        "b": "The two trees must have the same height.",
+        "c": "The inorder traversal of both trees is the same.",
+        "d": "The preorder traversal of both trees is the same."
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Different insertion orders can produce different tree shapes.",
+        "b": "Incorrect. Different tree shapes can result in different heights.",
+        "c": "Correct. Because both structures are BSTs containing the same distinct keys, their inorder traversals contain those keys in the same sorted order.",
+        "d": "Incorrect. Preorder traversal depends on the structure of the tree, which can change with insertion order."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}
