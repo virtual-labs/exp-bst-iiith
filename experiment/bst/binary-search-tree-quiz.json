@@ -1,52 +1,158 @@
-[{
-    "question": "1. The number of edges from the root to the node is called __________ of the tree.",
-    "answers": {
-                "a": "Length",
-                "b": "Width",
-                "c": "Depth",
-                "d": "Height"
-            },
-            "correctAnswer": "c"
-        },
-
-    {  
-      "question": "2. The number of edges from the node to the deepest leaf is called _________ of the tree.", 
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The number of edges from the root to a particular node is called the ________ of that node.",
+      "answers": {
+        "a": "Length",
+        "b": "Width",
+        "c": "Depth",
+        "d": "Height"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Length is not the standard tree terminology for the number of edges from the root to a node.",
+        "b": "Incorrect. Width describes the number of nodes or breadth of a tree at a particular level, not the root-to-node distance.",
+        "c": "Correct. The depth of a node is the number of edges on the path from the root to that node.",
+        "d": "Incorrect. Height measures the longest downward path from a node to a leaf."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "2. The number of edges from a node to its deepest leaf is called the ________ of that node.",
       "answers": {
         "a": "Height",
-        "b": "Depth", 
-	    "c": "Width ", 
+        "b": "Depth",
+        "c": "Width",
         "d": "Length"
-        },
-      "correctAnswer": "a"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. The height of a node is the number of edges on the longest path from that node to a leaf.",
+        "b": "Incorrect. Depth measures the distance of a node from the root.",
+        "c": "Incorrect. Width refers to the number of nodes across a level or related breadth measures, not the longest downward path.",
+        "d": "Incorrect. Length is not the standard term for the longest path from a node to a leaf."
+      },
+      "difficulty": "beginner"
     },
     {
       "question": "3. What is a full binary tree?",
       "answers": {
         "a": "Each node has exactly two children",
-        "b": "Each node has exactly one or two children ",
-	    "c": "Each node has exactly zero or two children  ",
+        "b": "Each node has exactly one or two children",
+        "c": "Each node has exactly zero or two children",
         "d": "All the leaves are at the same level"
-        },
-      "correctAnswer": "c"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. A full binary tree can contain leaf nodes, which have no children.",
+        "b": "Incorrect. A full binary tree does not allow nodes with exactly one child.",
+        "c": "Correct. In a full binary tree, every node has either zero children or exactly two children.",
+        "d": "Incorrect. Having all leaves at the same level describes a different structural property and is not the definition of a full binary tree."
+      },
+      "difficulty": "beginner"
     },
     {
-      "question": "4. What is a complete binary tree? ",
+      "question": "4. What is a complete binary tree?",
       "answers": {
-        "a": "A binary tree, which is completely filled, with the possible exception of the bottom level, which is filled from left to right ",
-        "b": "Each node has exactly zero or two children ",
-	    "c": "A tree In which all nodes have degree 2",
-        "d": "A binary tree, which is completely filled, with the possible exception of the bottom level, which is filled from right to left"
-        },
-      "correctAnswer": "a"
+        "a": "A binary tree that is completely filled, with the possible exception of the bottom level, which is filled from left to right",
+        "b": "A binary tree in which every node has exactly zero or two children",
+        "c": "A tree in which all nodes have degree 2",
+        "d": "A binary tree that is completely filled, with the possible exception of the bottom level, which is filled from right to left"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In a complete binary tree, every level except possibly the last is full, and the last level is filled from left to right.",
+        "b": "Incorrect. This describes the child-count property of a full binary tree rather than completeness.",
+        "c": "Incorrect. A binary tree node can have zero, one, or two children, so every node does not have degree 2.",
+        "d": "Incorrect. The last level of a complete binary tree is filled from left to right, not right to left."
+      },
+      "difficulty": "intermediate"
     },
     {
-    "question": "5. Which of the following is not an advantage of trees? ",
-    "answers": {
-        "a": "Hierarchical structure  ",
-        "b": "Router algorithms  ",
-	    "c": "Faster search",
-        "d": " Undo/Redo operations in a notepad"
-        },
-    "correctAnswer": "d"
+      "question": "5. Which of the following is not a typical advantage or application of using tree structures?",
+      "answers": {
+        "a": "Representing hierarchical data",
+        "b": "Supporting efficient searching in suitable tree structures",
+        "c": "Representing routing or hierarchical decision structures",
+        "d": "Undo/Redo operations in a notepad"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Tree structures are commonly used to represent hierarchical relationships.",
+        "b": "Incorrect. Certain trees, including binary search trees, can support efficient searching when their structure is suitable.",
+        "c": "Incorrect. Tree structures can represent hierarchical routing, decision, and organization structures.",
+        "d": "Correct. Undo/Redo operations are more commonly associated with stacks or related history-management structures rather than being a typical direct application of BSTs."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. In a binary search tree containing distinct keys, where is a key smaller than the current node's key inserted?",
+      "answers": {
+        "a": "In the left subtree",
+        "b": "In the right subtree",
+        "c": "At the root",
+        "d": "At the deepest leaf regardless of its value"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. By the BST ordering property, a key smaller than the current node's key belongs in its left subtree.",
+        "b": "Incorrect. The right subtree is used for keys larger than the current node's key.",
+        "c": "Incorrect. A new key becomes the root only when insertion begins with an empty tree.",
+        "d": "Incorrect. BST insertion follows key comparisons rather than simply placing a key at the deepest leaf."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Which traversal of a binary search tree can be used to obtain its keys in sorted order?",
+      "answers": {
+        "a": "Preorder",
+        "b": "Inorder",
+        "c": "Postorder",
+        "d": "Level-order"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. Preorder visits the node before its subtrees and does not generally produce sorted keys.",
+        "b": "Correct. Inorder traversal visits the left subtree, node, and right subtree, producing the BST keys in sorted order.",
+        "c": "Incorrect. Postorder visits the node after both subtrees and does not generally produce sorted keys.",
+        "d": "Incorrect. Level-order traversal visits nodes according to their levels rather than sorted key order."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "8. Suppose a BST contains 40 at its root. During a search for key 25, which subtree should be explored after comparing 25 with 40?",
+      "answers": {
+        "a": "The right subtree",
+        "b": "Both subtrees",
+        "c": "The left subtree",
+        "d": "Neither subtree"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. The right subtree contains keys greater than the current node's key.",
+        "b": "Incorrect. A BST search uses the ordering property to select one subtree at each comparison.",
+        "c": "Correct. Since $25<40$, the search continues in the left subtree.",
+        "d": "Incorrect. The key is not equal to the current node, so the search must continue in the appropriate subtree."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. If the same distinct keys are inserted into a binary search tree in two different orders, which result is guaranteed to be the same?",
+      "answers": {
+        "a": "The tree shape",
+        "b": "The height",
+        "c": "The preorder traversal",
+        "d": "The inorder traversal"
+      },
+      "correctAnswer": "d",
+      "explanations": {
+        "a": "Incorrect. Different insertion orders can create different arrangements of the nodes.",
+        "b": "Incorrect. Since the arrangement can change, the height can also change.",
+        "c": "Incorrect. Preorder traversal depends on the particular structure produced by insertion.",
+        "d": "Correct. The inorder traversal of a BST containing the same distinct keys lists those keys in sorted order regardless of insertion order."
+      },
+      "difficulty": "advanced"
     }
-]
+  ]
+}
