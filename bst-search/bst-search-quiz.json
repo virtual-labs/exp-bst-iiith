@@ -1,0 +1,158 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. Following is the image of a binary search tree rooted at 4.<br><img src=\"images/quiz_q1.png\"><br>Which of the following can be the sequence of nodes visited when searching for 10, assuming that 10 is not present in the tree?",
+      "answers": {
+        "a": "4, 6, 7, 10",
+        "b": "4, 6, 7, 8",
+        "c": "4, 3, 1, 2",
+        "d": "4, 6, 5, 10"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. This sequence reaches a node containing 10, which contradicts the condition that 10 is not present in the tree.",
+        "b": "Correct. The search starts at 4, follows the path determined by BST comparisons, and can terminate at 8 when 10 is not found.",
+        "c": "Incorrect. After comparing 10 with the root 4, the search must continue toward larger keys rather than follow this sequence.",
+        "d": "Incorrect. The sequence does not follow the BST ordering decisions required when searching for 10."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "2. To find the smallest element in the subtree rooted at a given node, we:",
+      "answers": {
+        "a": "Go recursively into the left child of the current node and stop when no left child exists.",
+        "b": "Go recursively into the left child, then go right if possible, and stop when neither child exists.",
+        "c": "Go recursively into the right child of the current node and stop when no left child exists.",
+        "d": "Go recursively into the right child and stop when neither child exists."
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. In a BST, the smallest key is found at the leftmost node, so we continue to the left until no left child exists.",
+        "b": "Incorrect. Moving to the right can skip nodes that may contain smaller keys.",
+        "c": "Incorrect. Moving to the right does not lead toward the smallest key in a BST.",
+        "d": "Incorrect. The right subtree contains larger keys and is not used to locate the minimum."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. When searching for a key $x$ in a BST, if the current node contains a key smaller than $x$, which child should be examined next?",
+      "answers": {
+        "a": "Left child",
+        "b": "Right child",
+        "c": "Both children",
+        "d": "The parent"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The left subtree contains keys smaller than the current node's key and therefore is not the appropriate direction when the current key is already smaller than $x$.",
+        "b": "Correct. If the current key is smaller than $x$, the BST ordering property requires the search to continue in the right subtree.",
+        "c": "Incorrect. A BST search uses its ordering property to select one subtree at each comparison.",
+        "d": "Incorrect. Searching moves downward through the tree rather than returning to the parent at this step."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "4. If the key being searched for is equal to the key at the current node, what should a standard BST search do?",
+      "answers": {
+        "a": "Continue to the left subtree",
+        "b": "Continue to the right subtree",
+        "c": "Report that the key has been found",
+        "d": "Restart from the root"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. There is no need to continue searching once the target key matches the current node.",
+        "b": "Incorrect. Continuing to the right is unnecessary after a successful comparison.",
+        "c": "Correct. Equality between the target key and the current node's key means the key has been found.",
+        "d": "Incorrect. Restarting the search is unnecessary after the target has been located."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "5. What happens when a BST search reaches a null child pointer before finding the target key?",
+      "answers": {
+        "a": "The search is unsuccessful",
+        "b": "The root is automatically inserted again",
+        "c": "The search becomes a linear search",
+        "d": "The target is assumed to be present"
+      },
+      "correctAnswer": "a",
+      "explanations": {
+        "a": "Correct. Reaching a null pointer means there is no node along that search path, so the target key is not present.",
+        "b": "Incorrect. A search operation does not automatically insert the root again.",
+        "c": "Incorrect. Reaching a null pointer does not change the search into a different search algorithm.",
+        "d": "Incorrect. A null pointer indicates that the search has reached an empty position."
+      },
+      "difficulty": "beginner"
+    },
+    {
+      "question": "6. A BST contains the keys 50, 30, 70, 20, 40, 60, and 80. What is the search path for key 60?",
+      "answers": {
+        "a": "50, 30, 40, 60",
+        "b": "50, 70, 60",
+        "c": "50, 70, 80, 60",
+        "d": "50, 30, 20, 60"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. After comparing 60 with 50, the search must move to the right subtree rather than the subtree rooted at 30.",
+        "b": "Correct. Since $60>50$, move right to 70; since $60<70$, move left to 60.",
+        "c": "Incorrect. After reaching 70, the comparison with 60 directs the search to the left rather than the right.",
+        "d": "Incorrect. The search does not enter the left subtree of 50 because 60 is greater than 50."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. In a BST, where is the largest key in a subtree located?",
+      "answers": {
+        "a": "At the leftmost node",
+        "b": "At the root of the subtree",
+        "c": "At the rightmost node",
+        "d": "At the deepest leaf"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. Moving left leads toward smaller keys in a BST.",
+        "b": "Incorrect. The root of the subtree is not necessarily its largest key.",
+        "c": "Correct. Following right-child links until no right child exists reaches the largest key in the subtree.",
+        "d": "Incorrect. The deepest node is not necessarily the largest node because depth and key ordering are different properties."
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. What is the worst-case time complexity of searching for a key in an unbalanced BST containing $n$ nodes?",
+      "answers": {
+        "a": "$O(1)$",
+        "b": "$O(\\log n)$",
+        "c": "$O(n)$",
+        "d": "$O(n^2)$"
+      },
+      "correctAnswer": "c",
+      "explanations": {
+        "a": "Incorrect. A search may require visiting many nodes before reaching the target or determining that it is absent.",
+        "b": "Incorrect. Logarithmic search time is associated with a sufficiently balanced BST, not the worst case for an arbitrary BST.",
+        "c": "Correct. In the worst case, a BST can become skewed, causing the search path to contain up to $n$ nodes.",
+        "d": "Incorrect. A single BST search follows one root-to-leaf path and does not require quadratic work."
+      },
+      "difficulty": "advanced"
+    },
+    {
+      "question": "9. A BST has root 40. During a search for 35, the search moves from 40 to 20. Which subtree of 20 should be searched next?",
+      "answers": {
+        "a": "Left subtree",
+        "b": "Right subtree",
+        "c": "Both subtrees",
+        "d": "The subtree rooted at 40"
+      },
+      "correctAnswer": "b",
+      "explanations": {
+        "a": "Incorrect. The target 35 is greater than the current key 20.",
+        "b": "Correct. Since $35>20$, the search proceeds to the right subtree of 20.",
+        "c": "Incorrect. A BST search chooses a single direction based on the key comparison.",
+        "d": "Incorrect. The search does not move back to the parent after determining the next direction."
+      },
+      "difficulty": "advanced"
+    }
+  ]
+}

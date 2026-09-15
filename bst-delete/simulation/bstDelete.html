@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+  <title>BST Delete Artefact</title>
+  <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
+  <link href="css/style_main.css" rel="stylesheet">
+
+	<link rel="stylesheet" 
+    href="static/lib/jquery-ui-1.8.11.custom.css">
+<link rel="stylesheet" href="../../assets/css/common-styles-responsive.css">
+</head>
+<body onload="init();" class="VisualizationMainPage">
+<div id="container">
+
+		<div class="instruction-box">
+            <button class="collapsible">Instructions</button>
+            <div class="content">
+  	            <ul>
+					<li>Type in a number and click <b>Insert</b> to insert in the BST.</li>
+					<li>Delete a number in the tree by typing in a number and then clicking the <b>Delete</b> button.</li>
+      	            <li>You can insert or Delete whole numbers less than 100.</li>
+                </ul>
+            </div>
+        </div>
+        
+	<div id="mainContent" style="margin-top:30px;">
+
+
+   <div id="algoControlSection">
+      <div id="AllInput">
+         <input type="text" class="text-box" placeholder="Enter Number" id="bst-demo-insert-text" />
+         <button class="button-input" id="bst-demo-insert-btn">Insert</button>
+         <button class="button-input" id="bst-demo-delete-btn">Delete</button>
+         <button class="button-input" id="bst-demo-reset-btn">Reset</button>
+      </div>
+   </div>
+   <div class="comment-box" style="height:12vh;">
+      <b>Observations</b>
+      <p id="ins"></p>
+   </div>
+
+			<!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
+			<canvas id="canvas" width="1000" height="500"></canvas>
+			<div id="generalAnimationControlSection" class="sr-only">
+				<table id="GeneralAnimationControls"> </table>
+			</div>
+		</div>
+	</div>
+
+
+    <script type="text/javascript"
+    src="static/lib/jquery-1.5.2.min.js"></script>
+	<script type="text/javascript"
+    src="static/lib/jquery-ui-1.8.11.custom.min.js"></script>
+
+	<script type="text/javascript"
+		src="static/lib/animation/CustomEvents.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/UndoFunctions.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedObject.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedLabel.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedCircle.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedRectangle.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimatedLinkedList.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/HighlightCircle.js"> </script>
+	<script type="text/javascript" 
+    src="static/lib/animation/Line.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/ObjectManager.js"> </script>
+	<script type="text/javascript"
+		src="static/lib/animation/AnimationMain.js"> </script>
+	<script type="text/javascript" 
+    src="static/lib/animation/Algorithm.js"> </script>
+	<script type="text/javascript" 
+                src="js/bstDelete.js"> </script>
+        <script src="../../assets/js/instruction-box.js"></script>
+        <script src="../../assets/js/iframeResize.js"></script>
+        
+        </body>
+</body>
+</html>

@@ -1,0 +1,215 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.button-input {
+  border-radius: 500px;
+  width: 9vw;
+  height: 3vw;
+  background-color: #288ec8;
+  border: none;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  /* font-size: 1.4vw; */
+  font-family: arial;
+}
+.button-input:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+.text-box {
+  width: 15vw;
+  height: 3vw;
+  background-color: rgb(235, 235, 235);
+  border-radius: 500px;
+  /* font-size: 1.4vw; */
+  text-align: center;
+}
+.text-box:hover {
+  cursor: auto;
+}
+
+#AllInput {
+  text-align: center;
+  padding-top: 1vh;
+}
+
+.instruction-box {
+  margin-top: 1vh;
+  position: relative;
+  width: 100%;
+  transition: width 0.2s ease-out;
+  border: 0.1vw solid grey;
+  font-family: arial;
+  /* font-size: 1.5vw; */
+  z-index: 10;
+}
+
+.collapsible {
+  background-color: Transparent;
+  color: "grey";
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  /* font-size: 1.5vw; */
+  font-weight: bold;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.collapsible::-moz-focus-inner {
+  border: 0;
+}
+
+.active,
+.collapsible:hover {
+  background-color: "white";
+}
+
+.collapsible:after {
+  content: "\25BE";
+  color: "grey";
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\25B4";
+}
+
+.content {
+  padding: 0 1.8vw;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: "white";
+}
+.comment-box {
+  position: relative;
+  height: 10vh;
+  left: 34%;
+  top: 17%;
+  float: middle;
+  padding: 1vw;
+  width: 30vw;
+  margin-top: 1%;
+  font-family: arial;
+  /* font-size: 1.5vw; */
+  text-align: center;
+}
+
+#mainContent {
+  text-align: center;
+}
+
+#canvas {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .button-input {
+    width: 30%;
+    min-width: 95px;
+    max-width: 140px;
+    height: 50px;
+    font-size: 16px;
+    margin: 8px 1.5%;
+    border-radius: 30px;
+    padding: 12px 8px;
+  }
+
+  .text-box {
+    width: 90% !important;
+    max-width: none !important;
+    height: 55px !important;
+    font-size: 20px !important;
+    margin: 12px auto !important;
+    display: block !important;
+    border-radius: 30px !important;
+    padding: 0 20px !important;
+    box-sizing: border-box !important;
+  }
+
+  #AllInput {
+    padding: 15px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #AllInput .text-box {
+    order: 1;
+  }
+
+  #AllInput button {
+    order: 2;
+    display: inline-block;
+  }
+
+  #AllInput small {
+    order: 3;
+    width: 90%;
+    margin-top: 8px !important;
+  }
+
+  .comment-box {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 95% !important;
+    max-width: none !important;
+    margin: 15px auto !important;
+    padding: 15px !important;
+    height: auto !important;
+    min-height: 90px;
+    font-size: 15px;
+    float: none !important;
+  }
+
+  #canvas {
+    max-width: none !important;
+    height: auto !important;
+    margin: 15px 0 !important;
+    display: block !important;
+    transform-origin: top center;
+  }
+
+  #mainContent {
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .instruction-box {
+    width: 95%;
+    margin: 10px auto;
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+
+  .collapsible {
+    font-size: 16px;
+  }
+
+  #mainContent {
+    margin-top: 10px !important;
+  }
+
+  #algoControlSection {
+    width: 100%;
+  }
+}
