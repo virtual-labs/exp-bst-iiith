@@ -2,6 +2,7 @@
   "unit-type": "lu",
   "label": "Binary Search Tree",
   "basedir": ".",
+  "LaTeXinMD": "true",
   "code-assessment": {
     "include": true,
     "languages": ["javascript"],
@@ -18,7 +19,7 @@
       "source": "overview.md",
       "target": "overview.html"
     },
-    
+
     {
       "unit-type": "task",
       "label": "Pretest",
@@ -34,8 +35,8 @@
         {
           "unit-type": "aim"
         },
-        
-	{
+
+        {
           "unit-type": "task",
           "label": " Concept",
           "content-type": "video",
@@ -49,15 +50,14 @@
           "source": "bst-properties.md",
           "target": "bst-properties.html"
         },
-        
-	{
-         "unit-type": "task",
-         "label": " Quiz",
-         "content-type": "assesment",
-         "source": "binary-search-tree-quiz.json",
-         "target": "binary-search-tree-quiz.html"
-       }
-      
+
+        {
+          "unit-type": "task",
+          "label": " Quiz",
+          "content-type": "assesment",
+          "source": "binary-search-tree-quiz.json",
+          "target": "binary-search-tree-quiz.html"
+        }
       ]
     },
     {
@@ -68,7 +68,7 @@
         {
           "unit-type": "aim"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Concept",
           "content-type": "video",
@@ -89,18 +89,18 @@
           "source": "simulation/bstInsert.html",
           "target": "bstInsert.html"
         },
-	
+
         {
-         "unit-type": "task",
-         "label": " Quiz",
-         "content-type": "assesment",
-         "source": "bst-insert-quiz.json",
-         "target": "bst-insert-quiz.html"
-       }
+          "unit-type": "task",
+          "label": " Quiz",
+          "content-type": "assesment",
+          "source": "bst-insert-quiz.json",
+          "target": "bst-insert-quiz.html"
+        }
       ]
     },
 
-{
+    {
       "unit-type": "lu",
       "label": "BST-Search",
       "basedir": "bst-search",
@@ -108,7 +108,7 @@
         {
           "unit-type": "aim"
         },
-	
+
         {
           "unit-type": "task",
           "label": " Algorithm",
@@ -123,7 +123,7 @@
           "source": "simulation/bstSearch.html",
           "target": "bstSearch.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": " Practice",
           "content-type": "simulation",
@@ -136,10 +136,10 @@
           "content-type": "assesment",
           "source": "bst-search-quiz.json",
           "target": "bst-search-quiz.html"
-        }        
+        }
       ]
     },
-{
+    {
       "unit-type": "lu",
       "label": "BST-Delete",
       "basedir": "bst-delete",
@@ -147,7 +147,7 @@
         {
           "unit-type": "aim"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Concept",
           "content-type": "video",
@@ -168,7 +168,7 @@
           "source": "simulation/bstDelete.html",
           "target": "bstDelete.html"
         },
-	{
+        {
           "unit-type": "task",
           "label": " Exercise",
           "content-type": "simulation",
@@ -176,17 +176,16 @@
           "target": "bstDeleteExercise.html"
         },
         {
-         "unit-type": "task",
-         "label": " Quiz",
-         "content-type": "assesment",
-         "source": "bst-delete-quiz.json",
-         "target": "bst-delete-quiz.html"
-       }
+          "unit-type": "task",
+          "label": " Quiz",
+          "content-type": "assesment",
+          "source": "bst-delete-quiz.json",
+          "target": "bst-delete-quiz.html"
+        }
       ]
     },
 
-
-        {
+    {
       "unit-type": "lu",
       "label": "Analysis",
       "basedir": "analysis",
@@ -194,7 +193,7 @@
         {
           "unit-type": "aim"
         },
-	{
+        {
           "unit-type": "task",
           "label": "Overview",
           "content-type": "video",
@@ -208,8 +207,8 @@
           "source": "uses.md",
           "target": "uses.html"
         },
-        
-	{
+
+        {
           "unit-type": "task",
           "label": "Relationships",
           "content-type": "video",
@@ -232,7 +231,7 @@
       "source": "posttest.json",
       "target": "posttest.html"
     },
-       
+
     {
       "unit-type": "task",
       "label": "Further Readings/References",
